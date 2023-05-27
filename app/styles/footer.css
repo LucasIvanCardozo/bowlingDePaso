@@ -1,0 +1,18 @@
+.footer{
+  background-color: #222222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
+
+.footer_terminos{
+  display: flex;
+  margin: 5px;
+  align-items: end;
+  font-size: .3rem;
+}
+
+.footer_terminos_texto{
+  margin: 0 3px;
+}
