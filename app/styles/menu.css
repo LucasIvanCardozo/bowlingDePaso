@@ -38,9 +38,57 @@ margin: 30px 0 0 0;
   justify-content: space-between;
   width: 40%;
   min-width: calc(3*65px);
+  max-width: 300px;
 }
 
 .sticker{
   height: 60px;
   width: 60px;
+  object-fit: contain;
+}
+.carta{
+  width: 95%;
+  height: 300px;
+  margin: auto;
+  background-color: #555;
+  border-radius: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.carta_categorias{
+  background-color: #aaa;
+  color: #fff;
+  list-style: none;
+  display: flex;
+  width: min-content;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: -15px;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  text-transform: uppercase ;
+}
+
+.carta_categorias::before{
+  content: "";
+  position: absolute;
+  height: calc(100% - 4px);
+  width: 140%;
+  top: 2px;
+  left: -20%;
+  z-index: -1;
+  background-color: #777;
+  border-radius: 5px;
+}
+
+.carta_categorias_li{
+  padding: 0 10px;
+  margin: 0;
+}
+
+.carta_categorias_p{
+  margin: 0;
 }
