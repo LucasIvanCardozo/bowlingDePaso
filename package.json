@@ -1,9 +1,12 @@
 {
+  "homepage": "http://Jodkas.github.io/bowlingDePaso",
   "private": true,
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "remix-serve build",
     "typecheck": "tsc"
   },
