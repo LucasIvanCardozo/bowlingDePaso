@@ -6,89 +6,144 @@
   height: 350px;
 }
 
-.logoText{
 
+.logoText_bowling {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
 }
 
-.logoText_bowling{
-font-size: 1rem;
-font-weight: bold;
-margin: 0;
+.logoText_dePaso {
+  font-size: 0.6rem;
+  margin: 0;
+  text-align: end;
+}
+.titulo {
+  font-size: 5rem;
+  margin: 30px 0 0 0;
 }
 
-.logoText_dePaso{
-font-size: .6rem;
-margin: 0;
-text-align: end;
-}
-.titulo{
-font-size: 5rem;
-margin: 30px 0 0 0;
+.titulo_descripcion {
+  font-size: 0.7rem;
+  width: 60%;
+  max-width: 400px;
+  text-align: center;
 }
 
-.titulo_descripcion{
- font-size: .7rem;
- width: 60%;
- max-width: 400px;
- text-align: center;
-}
-
-.stickers{
+.stickers {
   display: flex;
   justify-content: space-between;
   width: 40%;
-  min-width: calc(3*65px);
+  min-width: calc(3 * 65px);
   max-width: 300px;
 }
 
-.sticker{
+.sticker {
   height: 60px;
   width: 60px;
   object-fit: contain;
 }
-.carta{
-  width: 95%;
+.carta {
+  width: 90%;
   height: 300px;
   margin: auto;
+  padding: 10px;
   background-color: #555;
   border-radius: 20px;
   position: relative;
-  z-index: 10;
 }
 
-.carta_categorias{
-  background-color: #aaa;
-  color: #fff;
-  list-style: none;
+.carta_categorias {
+  width: 50%;
+  min-width: min-content;
   display: flex;
-  width: min-content;
+  justify-content: center;
   margin: auto;
+  padding: 0 15px;
   left: 0;
   right: 0;
-  top: -15px;
-  padding: 10px;
-  border-radius: 10px;
+  top: -5px;
+  border-radius: 2px;
   position: absolute;
-  text-transform: uppercase ;
-}
-
-.carta_categorias::before{
-  content: "";
-  position: absolute;
-  height: calc(100% - 4px);
-  width: 140%;
-  top: 2px;
-  left: -20%;
-  z-index: -1;
   background-color: #777;
-  border-radius: 5px;
 }
 
-.carta_categorias_li{
+.carta_categoriasUl {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  border-radius:5px;
+  height: 100%;
+  background-color: #aaa;
   padding: 0 10px;
+  margin: -3px 0;
+  box-shadow: 0 0 5px 0px #222;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+.carta_categoriasLi {
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 7px 7px;
+  margin: 0;
+  height: 100%;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.carta_categoriasLi:hover {
+  background-color: #eee;
+  cursor: pointer;
+  box-shadow: 0 0 10px 0px #2225;
+}
+
+.carta_categoriasLi:hover > .carta_categoriasP {
+  color: #222;
+  transform: scale(1.05);
+}
+
+.carta_categoriasP {
+  margin: 0;
+  transition: color 0.3s, transform .1s;
+}
+
+.carta_subcategorias{
+  background-color: #ccc;
+  position: absolute;
+  top: 100%;
+  width: min-content;
+  max-width: 95%;
+  box-shadow: 0 2px 4px 0px #2225;
+  padding: 2px 5px 3px 5px;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+}
+
+.carta_subcategoriasUl {
+  list-style: none;
+  font-size: .35rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+
+.carta_subcategoriasLi{
+  padding: 0 5px;
+}
+
+.carta_subcategoriasP {
   margin: 0;
 }
 
-.carta_categorias_p{
-  margin: 0;
+
+
+.carta_info {
+  height: 100%;
+  width: 100%;
+  background-image: url("~/media/images/fondoCarta.jpg");
+  background-size: cover;
 }
+
