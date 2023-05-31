@@ -44,8 +44,9 @@
   object-fit: contain;
 }
 .carta {
+  position: relative;
   width: 90%;
-  height: 300px;
+  min-height: 200px;
   margin: auto;
   padding: 10px;
   background-color: #555;
@@ -72,7 +73,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  list-style: none;
   border-radius:5px;
   height: 100%;
   background-color: #aaa;
@@ -122,12 +122,10 @@
 }
 
 .carta_subcategoriasUl {
-  list-style: none;
   font-size: .35rem;
   display: flex;
   justify-content: space-evenly;
   margin: 0;
-  padding: 0;
 }
 
 .carta_subcategoriasLi{
@@ -141,9 +139,14 @@
 
 
 .carta_info {
+  min-height: 200px;
   height: 100%;
   width: 100%;
   background-image: url("~/media/images/fondoCarta.jpg");
   background-size: cover;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 

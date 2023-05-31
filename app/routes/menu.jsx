@@ -1,11 +1,14 @@
 import { json } from '@remix-run/node';
 import { Link, useLoaderData } from '@remix-run/react';
 import EnBlanco from '../components/enBlanco';
+import ItemCarta from '../components/itemCarta';
 import styles from '~/styles/menu.css';
+import stylesItemCarta from '~/styles/itemCarta.css';
 import pizza from '~/media/images/pizza.png';
 import cerveza from '~/media/images/cerveza.png';
 import helado from '~/media/images/helado.png';
-import { useState } from 'react';
+import { getPosts } from '../db/db';
+import { useEffect, useState } from 'react';
 
 export const meta = () => {
   return [
@@ -18,51 +21,22 @@ export const meta = () => {
 };
 
 export const links = () => {
-  return [{ rel: 'stylesheet', href: styles }];
+  return [
+    { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: stylesItemCarta },
+  ];
 };
 
 export const loader = async () => {
-  return json([
-    { id: 0, name: 'cafeteria', subcategoriasBool: false, data: [] },
-    { id: 1, name: 'bebidas', subcategoriasBool: false, data: [] },
-    {
-      id: 2,
-      name: 'comidas',
-      subcategoriasBool: true,
-      data: [
-        {
-          name: 'tapeo',
-          data: [],
-        },
-        { name: 'hamburguesas' },
-        { name: 'pizzas' },
-        {
-          name: 'sandwiches',
-          data: [
-            {
-              name: 'super panchos',
-              subCategorias: [
-                { name: 'solo' },
-                { name: 'jamón y queso' },
-                { name: 'queso y panenta' },
-                { name: 'cheddar y panceta' },
-                { name: 'cheddar, panceta y cebolla caramelizada' },
-              ],
-              adicional: [{ name: 'papitas pay' }],
-            },
-          ],
-        },
-        { name: 'guarniciones' },
-      ],
-    },
-    { id: 3, name: 'postres', subcategoriasBool: false, data: [] },
-  ]);
+  return json(await getPosts());
 };
 
 export default function Menu() {
   const data = useLoaderData();
-  const [categoria, setCategoria] = useState(2);
-  const [subCategoria, setSubcategoria] = useState(0);
+  const [categoria, setCategoria] = useState(0);
+  const [subcategoria, setSubcategoria] = useState(-1);
+  const [pagina, setPagina] = useState({ categoria: 0, subcategoria: 0 });
+
   return (
     <>
       <main className="main">
@@ -88,7 +62,16 @@ export default function Menu() {
               <div className="carta_subcategorias">
                 <ul className="carta_subcategoriasUl">
                   {data[categoria].data.map((data) => (
-                    <li className="carta_subcategoriasLi" key={data.name}>
+                    <li
+                      className="carta_subcategoriasLi"
+                      key={data.name}
+                      onClick={() =>
+                        setPagina({
+                          categoria: categoria,
+                          subcategoria: data.id,
+                        })
+                      }
+                    >
                       <p className="carta_subcategoriasP">{data.name}</p>
                     </li>
                   ))}
@@ -100,8 +83,12 @@ export default function Menu() {
                 className="carta_categoriasLi"
                 key={data.name}
                 onClick={() => {
-                  setCategoria(data.id);
-                  setSubcategoria(0);
+                  categoria != data.id
+                    ? (setCategoria(data.id),
+                      data.subcategoriasBool
+                        ? null
+                        : setPagina({ categoria: data.id, subcategoria: 0 }))
+                    : null;
                 }}
               >
                 <p className="carta_categoriasP">{data.name}</p>
@@ -109,7 +96,15 @@ export default function Menu() {
             ))}
           </ul>
         </div>
-        <section className="carta_info"></section>
+        <section className="carta_info">
+          {data[pagina.categoria].subcategoriasBool
+            ? data[pagina.categoria].data[pagina.subcategoria].data.map(
+                (data) => <ItemCarta key={data.name} data={data} />
+              )
+            : data[pagina.categoria].data.map((data) => (
+                <ItemCarta  key={data.name} data={data} />
+              ))}
+        </section>
       </article>
     </>
   );
