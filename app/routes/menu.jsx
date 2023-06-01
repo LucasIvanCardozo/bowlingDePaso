@@ -2,8 +2,10 @@ import { json } from '@remix-run/node';
 import { Link, useLoaderData } from '@remix-run/react';
 import EnBlanco from '../components/enBlanco';
 import ItemCarta from '../components/itemCarta';
+import Marcas from '../components/marcas';
 import styles from '~/styles/menu.css';
 import stylesItemCarta from '~/styles/itemCarta.css';
+import stylesMarcas from '~/styles/marcas.css';
 import pizza from '~/media/images/pizza.png';
 import cerveza from '~/media/images/cerveza.png';
 import helado from '~/media/images/helado.png';
@@ -24,6 +26,7 @@ export const links = () => {
   return [
     { rel: 'stylesheet', href: styles },
     { rel: 'stylesheet', href: stylesItemCarta },
+    { rel: 'stylesheet', href: stylesMarcas },
   ];
 };
 
@@ -102,8 +105,9 @@ export default function Menu() {
                 (data) => <ItemCarta key={data.name} data={data} />
               )
             : data[pagina.categoria].data.map((data) => (
-                <ItemCarta  key={data.name} data={data} />
+                <ItemCarta key={data.name} data={data} />
               ))}
+          <Marcas />
         </section>
       </article>
     </>

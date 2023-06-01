@@ -1,0 +1,21 @@
+.marcas{
+  width: 100%;
+}
+
+.marcas_ul{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.marcas_li{
+  height: 70px;
+  width: 120px;
+  margin: 0 5px;
+}
+
+.marcas_img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}

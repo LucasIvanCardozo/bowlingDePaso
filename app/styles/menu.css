@@ -54,6 +54,7 @@
   position: relative;
 }
 
+
 .carta_categorias {
   width: 50%;
   min-width: min-content;
@@ -68,6 +69,7 @@
   position: absolute;
   background-color: #777;
 }
+
 
 .carta_categoriasUl {
   position: relative;
