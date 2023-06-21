@@ -11,6 +11,7 @@ import cerveza from '~/media/images/cerveza.png';
 import helado from '~/media/images/helado.png';
 import { getPosts } from '../db/db';
 import { useEffect, useState } from 'react';
+import LogoTexto from '../components/logoTexto';
 
 export const meta = () => {
   return [
@@ -43,15 +44,14 @@ export default function Menu() {
   return (
     <>
       <main className="main">
-        <div className="logoText">
-          <p className="logoText_bowling">BOWLING</p>
-          <p className="logoText_dePaso">DE PASO</p>
+        <LogoTexto size="1.3" />
+        <div className="titulo">
+          <h1 className="titulo_h">MENÚ</h1>
+          <p className="titulo_descripcion">
+            En nuestro Bowling ofrecemos una variedad de comidas y bebidas
+            deliciosas para una experiencia completa.
+          </p>
         </div>
-        <h1 className="titulo">MENÚ</h1>
-        <p className="titulo_descripcion">
-          En nuestro Bowling ofrecemos una variedad de comidas y bebidas
-          deliciosas para una experiencia completa.
-        </p>
         <div className="stickers">
           <img className="sticker" src={pizza} alt="pizza sin fondo" />
           <img className="sticker" src={cerveza} alt="cerveza sin fondo" />

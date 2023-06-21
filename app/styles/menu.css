@@ -2,58 +2,61 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 350px;
+  justify-content: space-between;
+  min-height: 60vh;
+  position: relative;
+  margin: 5vh 0;
 }
 
-
-.logoText_bowling {
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 0;
+.titulo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.logoText_dePaso {
-  font-size: 0.6rem;
-  margin: 0;
-  text-align: end;
-}
-.titulo {
-  font-size: 5rem;
-  margin: 30px 0 0 0;
+.titulo_h {
+  font-family: bebasNeue;
+  letter-spacing: 10px;
+  font-size: 10rem;
 }
 
 .titulo_descripcion {
-  font-size: 0.7rem;
-  width: 60%;
-  max-width: 400px;
+  font-family: arialRounded;
+  margin: 0;
+  font-size: 1rem;
+  width: 70vw;
+  max-width: 500px;
   text-align: center;
 }
 
 .stickers {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  width: 40%;
-  min-width: calc(3 * 65px);
-  max-width: 300px;
+  justify-content: center;
+  width: 60vw;
+  max-width: 800px;
+  height: 20vw;
+  max-height: 200px;
 }
 
 .sticker {
-  height: 60px;
-  width: 60px;
+  height: 100%;
+  margin: 0 2vw;
+  flex-grow: 1;
   object-fit: contain;
 }
 .carta {
   position: relative;
   width: 90%;
-  min-height: 200px;
+  max-width: 1000px;
   margin: auto;
-  padding: 10px;
+  padding: 8px;
   background-color: #555;
   border-radius: 20px;
   position: relative;
+  box-shadow: 0 0px 5px 0px #222;
+  overflow: hidden;
 }
-
 
 .carta_categorias {
   width: 50%;
@@ -70,16 +73,17 @@
   background-color: #777;
 }
 
-
 .carta_categoriasUl {
+  font-family: bebasNeue;
+  letter-spacing: 1px;
   position: relative;
   display: flex;
   justify-content: center;
-  border-radius:5px;
+  border-radius: 2px;
   height: 100%;
   background-color: #aaa;
-  padding: 0 10px;
   margin: -3px 0;
+  padding: 0 10px;
   box-shadow: 0 0 5px 0px #222;
   z-index: 10;
   text-transform: uppercase;
@@ -87,9 +91,8 @@
 
 .carta_categoriasLi {
   color: #fff;
-  font-size: 0.7rem;
-  font-weight: bold;
-  padding: 7px 7px;
+  font-size: 2rem;
+  padding: 5px 7px;
   margin: 0;
   height: 100%;
   transition: background-color 0.3s, box-shadow 0.3s;
@@ -102,16 +105,16 @@
 }
 
 .carta_categoriasLi:hover > .carta_categoriasP {
-  color: #222;
-  transform: scale(1.05);
+  color: #222222;
 }
 
 .carta_categoriasP {
   margin: 0;
-  transition: color 0.3s, transform .1s;
+  transition: color 0.3s, transform 0.1s;
 }
 
-.carta_subcategorias{
+.carta_subcategorias {
+  font-family: bebasNeue;
   background-color: #ccc;
   position: absolute;
   top: 100%;
@@ -124,31 +127,30 @@
 }
 
 .carta_subcategoriasUl {
-  font-size: .35rem;
+  font-size: 1rem;
   display: flex;
   justify-content: space-evenly;
   margin: 0;
 }
 
-.carta_subcategoriasLi{
+.carta_subcategoriasLi {
   padding: 0 5px;
+  cursor: pointer;
 }
 
 .carta_subcategoriasP {
   margin: 0;
 }
 
-
-
 .carta_info {
-  min-height: 200px;
   height: 100%;
+  border-radius: 10px;
   width: 100%;
-  background-image: url("~/media/images/fondoCarta.jpg");
+  background-image: url('~/media/images/fondoCarta.jpg');
   background-size: cover;
-  padding-top: 30px;
+  padding-top: 80px;
   display: flex;
   justify-content: space-around;
+
   flex-wrap: wrap;
 }
-

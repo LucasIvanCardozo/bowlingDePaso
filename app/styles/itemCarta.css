@@ -3,15 +3,13 @@
   flex-direction: column;
   width: max-content;
   text-align: center;
-  margin: 5px;
-  border-radius: 10px;
-  background-color: #fff3;
-  box-shadow: 0 0 10px 5px #2221;
+  margin: 10px 5px;
 }
 
 .itemCarta_titulo{
   margin: 0;
   text-transform: uppercase;
+  border-bottom: 1px solid #0003;
 }
 
 .itemCarta_ul{
@@ -21,7 +19,7 @@
 }
 
 .itemCarta_li{
-  font-size: .9rem;
+  font-size: 1rem;
   margin: 5px;
 }
 
@@ -30,7 +28,7 @@
 }
 
 .itemCarta_adicional_titulo {
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-top: 5px;
 }
 

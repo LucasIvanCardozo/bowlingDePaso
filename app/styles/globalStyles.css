@@ -1,3 +1,15 @@
+@font-face {
+  font-family: bebasNeue;
+  src: local('bebasNeue'),
+    url(~/media/fonts/BebasNeue-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: arialRounded;
+  src: local('arialRounded'),
+    url(~/media/fonts/Arial-Rounded-MT-Std.woff2) format('woff2');
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -13,6 +25,7 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  scroll-behavior: smooth
 }
 
 /* Sections

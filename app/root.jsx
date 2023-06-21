@@ -1,9 +1,12 @@
 import globalStyles from '~/styles/globalStyles.css';
 import navStyles from '~/styles/nav.css';
+import contactosStyles from '~/styles/contactos.css';
 import footerStyles from '~/styles/footer.css';
 import Nav from './components/nav';
 import Footer from './components/footer';
+import Contactos from './components/contactos';
 import background from '~/media/images/fondoMasContraste.webp';
+import stylesLogo from '~/styles/logoTexto.css';
 
 import {
   Links,
@@ -25,6 +28,8 @@ export const links = () => {
       rel: 'stylesheet',
       href: footerStyles,
     },
+    { rel: 'stylesheet', href: contactosStyles },
+    { rel: 'stylesheet', href: stylesLogo },
   ];
 };
 
@@ -44,6 +49,7 @@ export default function App() {
       >
         <Nav />
         <Outlet />
+        <Contactos />
         <Footer />
         <ScrollRestoration />
         <Scripts />
