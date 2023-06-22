@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80vw;
+  width: 100%;
   margin: auto;
   margin-top: -5vh;
   overflow: hidden;
@@ -25,9 +25,10 @@
 }
 
 .main_bolo {
+  top: -30%;
   position: absolute;
-  right: 0;
-  height: 150%;
+  right: -10%;
+  height: 180%;
   transform: rotate(20deg);
 }
 
@@ -79,7 +80,6 @@
 
 .article_p2_p {
   font-family: bebasNeue;
-  width: 200px;
   margin: 0;
 }
 
@@ -118,9 +118,11 @@
 
 .section1_containerImg {
   position: relative;
+  box-shadow: 0 0 5px 1px #000;
 }
 
 .section1_img {
+  display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;

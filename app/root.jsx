@@ -16,6 +16,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+import Dimensiones from './components/dimensiones';
+import { useEffect, useState } from 'react';
 
 export const links = () => {
   return [
@@ -34,6 +36,24 @@ export const links = () => {
 };
 
 export default function App() {
+  const [width, setWidth] = useState();
+  const [height, setHeight] = useState();
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+
   return (
     <html lang="es">
       <head>
@@ -47,7 +67,7 @@ export default function App() {
           backgroundImage: `url(${background})`,
         }}
       >
-        <Nav />
+        <Nav width={width} height={height} />
         <Outlet />
         <Contactos />
         <Footer />

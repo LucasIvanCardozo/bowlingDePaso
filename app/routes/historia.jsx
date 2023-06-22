@@ -14,6 +14,20 @@ export default function Historia() {
   return (
     <>
       <h1>Pagina de historia</h1>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <Link to="/">Volver</Link>
     </>
   );
