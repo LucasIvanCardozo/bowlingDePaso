@@ -1,5 +1,6 @@
 .marcas{
   width: 100%;
+  align-self: flex-end;
 }
 
 .marcas_ul{

@@ -13,9 +13,9 @@ export default function Nav() {
         >
           <Link
             className={`nav_link${selected == 1 ? ' nav_link_selected' : ''}`}
-            to="/menu"
+            to="/"
           >
-            MENÚ
+            INICIO
           </Link>
         </li>
         <li
@@ -35,9 +35,9 @@ export default function Nav() {
         >
           <Link
             className={`nav_link${selected == 3 ? ' nav_link_selected' : ''}`}
-            to="/"
+            to="/menu"
           >
-            INICIO
+            MENU
           </Link>
         </li>
         <li

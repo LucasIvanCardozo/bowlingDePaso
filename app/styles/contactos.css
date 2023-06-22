@@ -1,32 +1,31 @@
-.contactos{
-  background: linear-gradient(#fff0,#2225);
+.contactos {
+  background: linear-gradient(#fff0, #2225);
   width: 100%;
   position: relative;
   padding: 10px 0;
   font-family: arialRounded;
 }
-.contactos_titulo{
+.contactos_titulo {
   font-family: bebasNeue;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  font-size: 4rem;
-  
+  font-size: 5rem;
 }
 
-.contactos_ul{
+.contactos_ul {
   display: flex;
   width: 100%;
   justify-content: center;
   margin: 0;
   flex-wrap: wrap;
 }
-.contactos_li{
+.contactos_li {
   display: flex;
   cursor: pointer;
   border-radius: 5%;
-  min-height: 200px;
-  max-width: 150px;
+  min-height: 300px;
+  max-width: 200px;
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-evenly;
@@ -36,27 +35,49 @@
   box-shadow: 1px 1px 5px 0px #0004;
 }
 
-.contactos_div{
+.contactos_div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.contactos_img{
-  height: 30px;
-  width: 30px;
+.contactos_img {
+  height: 60px;
+  width: 60px;
   object-fit: contain;
 }
 
-.contactos_h{
+.contactos_h {
   margin-top: 5px;
   font-family: bebasNeue;
   letter-spacing: 1px;
-  font-size: 1em;
+  font-size: 1.5rem;
 }
 
-.contactos_p{
+.contactos_p {
   text-align: center;
-  font-size: .9em;
+  font-size: 1rem;
   margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .contactos_ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+    .contactos_li {
+      border-radius: 8px;
+      min-height: 0;
+      flex-direction: row;
+      width: 80vw;
+      max-width: none;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 10px 5px;
+      margin: 10px 0;
+      background-color: #eeeeee;
+      box-shadow: 1px 1px 5px 0px #0004;
+    }
 }
