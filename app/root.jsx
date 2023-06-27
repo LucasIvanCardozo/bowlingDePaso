@@ -7,7 +7,9 @@ import Footer from './components/footer';
 import Contactos from './components/contactos';
 import background from '~/media/images/fondoMasContraste.webp';
 import stylesLogo from '~/styles/logoTexto.css';
+import bebasNeue from '~/media/fonts/BebasNeue-Regular.woff2';
 
+import arialRounded from '~/media/fonts/Arial-Rounded-MT-Std.woff2';
 import {
   Links,
   LiveReload,
@@ -21,6 +23,20 @@ import { useEffect, useState } from 'react';
 
 export const links = () => {
   return [
+    {
+      rel: 'preload',
+      href: bebasNeue,
+      as: 'font',
+      type: 'font/woff2',
+      crossOrigin: 'true',
+    },
+    {
+      rel: 'preload',
+      href: arialRounded,
+      as: 'font',
+      type: 'font/woff2',
+      crossOrigin: 'true',
+    },
     { rel: 'stylesheet', href: globalStyles },
     {
       rel: 'stylesheet',

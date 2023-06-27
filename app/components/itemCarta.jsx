@@ -9,7 +9,7 @@ export default function ItemCarta({ data }) {
           </li>
         ))}
         {data.hasOwnProperty('adicional') ? (
-          <div className="itemCarta_adicional">
+          <li className="itemCarta_adicional">
             <h4 className="itemCarta_adicional_titulo">adicional</h4>
             <ul className="itemCarta_adicional_ul">
               {data.adicional.map((data) => (
@@ -18,7 +18,7 @@ export default function ItemCarta({ data }) {
                 </li>
               ))}
             </ul>
-          </div>
+          </li>
         ) : null}
       </ul>
     </div>
