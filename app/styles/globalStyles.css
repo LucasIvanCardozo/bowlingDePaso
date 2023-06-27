@@ -25,7 +25,8 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Sections
@@ -38,8 +39,27 @@ html {
 body {
   user-select: none;
   margin: 0;
+  font-size: 1rem;
+  overflow-x: hidden;
 }
 
+@media screen and (min-width: 481px) and (max-width: 768px){
+  body {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 1.7rem;
+  }
+}
 /**
  * Render the `main` element consistently in IE.
  */

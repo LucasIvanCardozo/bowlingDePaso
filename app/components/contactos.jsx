@@ -1,9 +1,9 @@
 import { json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import ItemContactos from './itemContactos';
-import instagram from '~/media/images/instagramLogo.png';
-import facebook from '~/media/images/facebookLogo.png';
-import whastapp from '~/media/images/whatsappLogo.png';
+import instagram from '~/media/images/instagramLogo.webp';
+import facebook from '~/media/images/facebookLogo.webp';
+import whastapp from '~/media/images/whatsappLogo.webp';
 
 export default function Contactos() {
   return (

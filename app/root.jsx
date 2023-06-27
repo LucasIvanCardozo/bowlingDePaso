@@ -68,6 +68,7 @@ export default function App() {
         }}
       >
         <Nav width={width} height={height} />
+        {/*<Dimensiones width={width} height={height} />*/}
         <Outlet />
         <Contactos />
         <Footer />

@@ -1,0 +1,43 @@
+
+
+.main {
+  width: 100%;
+  max-height: 80vh;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  margin-top: -5vh;
+}
+
+.main_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 9em;
+  min-width: max-content;
+}
+
+.main_img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.main_header {
+  margin-left: -4.32em;
+  text-align: end;
+  align-self: flex-end;
+}
+
+.main_h1 {
+  font-family: bebasNeue;
+  font-size: 3.6em;
+  margin-bottom: -.3em;
+}
+
+.main_p {
+  font-size: 1.8em;
+  margin: 0;
+}

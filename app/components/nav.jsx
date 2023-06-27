@@ -20,15 +20,16 @@ export default function Nav({ width, height }) {
         onClick={() => (menuOpen ? setMenuOpen(!menuOpen) : null)}
         open={menuOpen}
       ></div>
-      <div
-        className="nav_check"
+      <button
+        className="nav_button"
+        aria-label="boton del menú"
         open={menuOpen}
         onClick={() => setMenuOpen(!menuOpen)}
       >
         <span className="nav_span"></span>
         <span className="nav_span"></span>
         <span className="nav_span"></span>
-      </div>
+      </button>
       <ul className="nav_ul" open={menuOpen}>
         <li
           className={`nav_li${selected == 1 ? ' nav_selected' : ''}`}

@@ -7,10 +7,9 @@
 }
 .contactos_titulo {
   font-family: bebasNeue;
-  letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  font-size: 5rem;
+  font-size: 3.5em;
 }
 
 .contactos_ul {
@@ -31,7 +30,7 @@
   justify-content: space-evenly;
   align-items: center;
   margin: 10px 20px;
-  background-color: #eeeeee;
+  background-color: #eee6;
   box-shadow: 1px 1px 5px 0px #0004;
 }
 
@@ -61,11 +60,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .contactos_titulo {
-    letter-spacing: 1px;
-    font-size: 4rem;
-  }
-
+ 
   .contactos_ul {
     flex-direction: column;
     align-items: center;
@@ -82,7 +77,6 @@
     align-items: center;
     padding: 10px 5px;
     margin: 10px 0;
-    background-color: #eeeeee;
     box-shadow: 1px 1px 5px 0px #0004;
   }
 }

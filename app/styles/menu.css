@@ -1,11 +1,19 @@
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   min-height: 60vh;
-  position: relative;
   margin: 5vh 0;
+}
+
+.logoText_bowling {
+  font-size: 1.8rem;
+}
+
+.logoText_dePaso {
+  font-size: .8rem;
 }
 
 .titulo {
@@ -16,14 +24,13 @@
 
 .titulo_h {
   font-family: bebasNeue;
-  letter-spacing: 10px;
-  font-size: 10rem;
+  font-size: 10em;
 }
 
 .titulo_descripcion {
   font-family: arialRounded;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1em;
   width: 70vw;
   max-width: 500px;
   text-align: center;
@@ -36,7 +43,7 @@
   width: 60vw;
   max-width: 800px;
   height: 20vw;
-  max-height: 200px;
+  max-height: 150px;
 }
 
 .sticker {
@@ -56,43 +63,36 @@
   border-radius: 20px;
   position: relative;
   box-shadow: 0 0px 5px 0px #222;
-  overflow: hidden;
 }
 
 .carta_categorias {
-  width: 50%;
-  min-width: min-content;
+  position: absolute;
   display: flex;
   justify-content: center;
-  margin: auto;
-  padding: 0 15px;
+  width: 100%;
+  min-width: min-content;
+  top: -10px;
   left: 0;
-  right: 0;
-  top: -5px;
   border-radius: 2px;
-  position: absolute;
-  background-color: #777;
 }
 
 .carta_categoriasUl {
   font-family: bebasNeue;
-  letter-spacing: 1px;
   position: relative;
   display: flex;
   justify-content: center;
   border-radius: 2px;
   height: 100%;
-  background-color: #aaa;
+  background-color: #888;
   margin: -3px 0;
   padding: 0 10px;
   box-shadow: 0 0 5px 0px #222;
   z-index: 10;
-  text-transform: uppercase;
 }
 
 .carta_categoriasLi {
   color: #fff;
-  font-size: 2rem;
+  font-size:1.2em;
   padding: 5px 7px;
   margin: 0;
   height: 100%;
@@ -115,7 +115,8 @@
 }
 
 .carta_subcategorias {
-  font-family: bebasNeue;
+  text-transform: lowercase;
+  font-family: arialRounded;
   background-color: #ccc;
   position: absolute;
   top: 100%;
@@ -128,7 +129,7 @@
 }
 
 .carta_subcategoriasUl {
-  font-size: 1rem;
+  font-size: .5em;
   display: flex;
   justify-content: space-evenly;
   margin: 0;
@@ -147,9 +148,9 @@
   height: 100%;
   border-radius: 10px;
   width: 100%;
-  background-image: url('~/media/images/fondoCarta.jpg');
+  background-image: url('~/media/images/fondoCarta.webp');
   background-size: cover;
-  padding-top: 80px;
+  padding-top: 8%;
   display: flex;
   justify-content: space-around;
   min-height: 500px;

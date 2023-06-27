@@ -1,10 +1,10 @@
 import { Link } from '@remix-run/react';
 import styles from '~/styles/_index.css';
 import LogoTexto from '../components/logoTexto';
-import estrellas from '~/media/images/estrellas.png';
-import bolo from '~/media/images/boloBlanco.png';
-import imagen1 from '~/media/images/imagen1.png';
-import imagen2 from '~/media/images/imagen2.png';
+import estrellas from '~/media/images/estrellas.webp';
+import bolo from '~/media/images/boloBlanco.webp';
+import imagen1 from '~/media/images/imagen1.webp';
+import imagen2 from '~/media/images/imagen2.webp';
 import { useEffect, useState } from 'react';
 
 export const meta = () => {
@@ -29,7 +29,7 @@ export default function Index() {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
     window.addEventListener('resize', handleResize);
-    
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -47,10 +47,15 @@ export default function Index() {
           <img
             className="main_estrellas"
             src={estrellas}
-            alt="estrellas en png"
+            alt="estrellas en webp"
           />
-          <LogoTexto size={width >= 1024 ? 12 : width < 767 ? 5 : 10} />
-          <img className="main_bolo" src={bolo} alt="bolo blanco" />
+          <LogoTexto />
+          <img
+            className="main_bolo"
+            src={bolo}
+            alt="bolo blanco"
+            loading="lazy"
+          />
         </div>
       </main>
       <article className="article">
@@ -82,6 +87,7 @@ export default function Index() {
                 className="section1_img"
                 src={imagen1}
                 alt="imagen del bowling"
+                loading="lazy"
               />
             </div>
             <p className="section1_p">
@@ -109,6 +115,7 @@ export default function Index() {
                 className="section1_img"
                 src={imagen2}
                 alt="imagen del bowling"
+                loading="lazy"
               />
             </div>
             <p className="section2_p">

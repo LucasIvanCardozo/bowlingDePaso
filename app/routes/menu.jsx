@@ -6,9 +6,9 @@ import Marcas from '../components/marcas';
 import styles from '~/styles/menu.css';
 import stylesItemCarta from '~/styles/itemCarta.css';
 import stylesMarcas from '~/styles/marcas.css';
-import pizza from '~/media/images/pizza.png';
-import cerveza from '~/media/images/cerveza.png';
-import helado from '~/media/images/helado.png';
+import pizza from '~/media/images/pizza.webp';
+import cerveza from '~/media/images/cerveza.webp';
+import helado from '~/media/images/helado.webp';
 import { getPosts } from '../db/db';
 import { useEffect, useState } from 'react';
 import LogoTexto from '../components/logoTexto';
@@ -53,9 +53,24 @@ export default function Menu() {
           </p>
         </div>
         <div className="stickers">
-          <img className="sticker" src={pizza} alt="pizza sin fondo" />
-          <img className="sticker" src={cerveza} alt="cerveza sin fondo" />
-          <img className="sticker" src={helado} alt="helado sin fondo" />
+          <img
+            className="sticker"
+            src={pizza}
+            alt="pizza sin fondo"
+            loading="lazy"
+          />
+          <img
+            className="sticker"
+            src={cerveza}
+            alt="cerveza sin fondo"
+            loading="lazy"
+          />
+          <img
+            className="sticker"
+            src={helado}
+            alt="helado sin fondo"
+            loading="lazy"
+          />
         </div>
       </main>
       <article className="carta">

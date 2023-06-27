@@ -19,21 +19,18 @@
 }
 
 .itemCarta_li{
-  font-size: 1rem;
+  font-size: 1em;
   margin: 5px;
 }
 
-.itemCarta_adicional{
-
-}
 
 .itemCarta_adicional_titulo {
   text-transform: capitalize;
+  font-size: 1.1em;
   margin-top: 5px;
 }
 
-.itemCarta_adicional_ul{}
 
 .itemCarta_adicional_li {
-  font-size: .9rem;
+  font-size: 1em;
 }
