@@ -33,7 +33,7 @@ export default function Nav({ width, height }) {
       <ul className="nav_ul" open={menuOpen}>
         <li
           className={`nav_li${selected == 1 ? ' nav_selected' : ''}`}
-          onClick={() => setSelected(1)}
+          onClick={() => (setSelected(1), setMenuOpen(false))}
         >
           <Link
             className={`nav_link${selected == 1 ? ' nav_link_selected' : ''}`}
@@ -44,7 +44,7 @@ export default function Nav({ width, height }) {
         </li>
         <li
           className={`nav_li${selected == 2 ? ' nav_selected' : ''}`}
-          onClick={() => setSelected(2)}
+          onClick={() => (setSelected(2), setMenuOpen(false))}
         >
           <Link
             className={`nav_link${selected == 2 ? ' nav_link_selected' : ''}`}
@@ -55,7 +55,7 @@ export default function Nav({ width, height }) {
         </li>
         <li
           className={`nav_li${selected == 3 ? ' nav_selected' : ''}`}
-          onClick={() => setSelected(3)}
+          onClick={() => (setSelected(3), setMenuOpen(false))}
         >
           <Link
             className={`nav_link${selected == 3 ? ' nav_link_selected' : ''}`}
@@ -66,7 +66,7 @@ export default function Nav({ width, height }) {
         </li>
         <li
           className={`nav_li${selected == 4 ? ' nav_selected' : ''}`}
-          onClick={() => setSelected(4)}
+          onClick={() => (setSelected(4), setMenuOpen(false))}
         >
           <Link
             className={`nav_link${selected == 4 ? ' nav_link_selected' : ''}`}
@@ -75,7 +75,10 @@ export default function Nav({ width, height }) {
             HISTORIA
           </Link>
         </li>
-        <li className="nav_li" onClick={() => setMenuOpen(false)}>
+        <li
+          className="nav_li"
+          onClick={() => (setSelected(5), setMenuOpen(false))}
+        >
           <Link className="nav_link" to="#contactos">
             CONTACTOS
           </Link>

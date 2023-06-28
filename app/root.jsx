@@ -24,6 +24,11 @@ import { useEffect, useState } from 'react';
 export const links = () => {
   return [
     {
+      rel: 'icon',
+      href: '/favicon.ico',
+      type: 'image/ico',
+    },
+    {
       rel: 'preload',
       href: bebasNeue,
       as: 'font',

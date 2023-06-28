@@ -102,8 +102,8 @@
   line-height: 80%;
   writing-mode: vertical-rl;
   filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff)
-  drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff)
-  drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff);
+    drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff);
   text-transform: uppercase;
   z-index: 10;
 }
@@ -119,6 +119,9 @@
 .section1_containerImg {
   position: relative;
   box-shadow: 0 0 5px 1px #000;
+  animation-name: entradaIzquierda;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 .section1_img {
@@ -128,6 +131,16 @@
   object-fit: cover;
 }
 
+@keyframes entradaIzquierda {
+  from {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 .section1_p {
   padding-left: 15%;
   text-align: end;
