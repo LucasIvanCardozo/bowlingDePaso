@@ -5,4 +5,4 @@ node_modules
 /public/build
 .env
 
-/app/db/db.jsx
+/app/db

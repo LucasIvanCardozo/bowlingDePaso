@@ -153,9 +153,12 @@
   width: 100%;
   background-image: url('~/media/images/fondoCarta.webp');
   background-size: cover;
+  padding: 0 5%;
+  gap: 30px;
   padding-top: 8%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   min-height: 500px;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }

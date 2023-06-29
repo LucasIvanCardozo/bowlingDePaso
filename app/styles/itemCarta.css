@@ -1,9 +1,9 @@
 .itemCarta{
   display: flex;
   flex-direction: column;
-  width: max-content;
-  text-align: center;
+  max-width: 400px;
   margin: 10px 5px;
+  flex-grow: 1;
 }
 
 .itemCarta_titulo{
@@ -18,16 +18,29 @@
 
 }
 
-.itemCarta_li{
-  font-size: 1em;
-  margin: 5px;
-}
 
 
 .itemCarta_adicional_titulo {
   text-transform: capitalize;
   font-size: 1.1em;
   margin-top: 5px;
+}
+
+.itemCarta_li{
+  margin: 1px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.itemCarta_li_nombre{
+  font-size: 1em;
+  margin: 0;
+}
+
+.itemCarta_li_descripcion{
+  font-size: .8em;
+  margin: 0;
+  align-self: flex-end;
 }
 
 

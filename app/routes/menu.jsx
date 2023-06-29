@@ -12,7 +12,6 @@ import helado from '~/media/images/helado.webp';
 import { getPosts } from '../db/db';
 import { useEffect, useState } from 'react';
 import LogoTexto from '../components/logoTexto';
-
 export const meta = () => {
   return [
     { title: 'Bowling de Paso - Menu' },

@@ -5,7 +5,12 @@ export default function ItemCarta({ data }) {
       <ul className="itemCarta_ul">
         {data.data.map((data) => (
           <li className="itemCarta_li" key={data.name}>
-            {data.name}
+            <p className="itemCarta_li_nombre">‧{data.name}</p>
+            {data.description ? (
+              <p className="itemCarta_li_descripcion">({data.description})</p>
+            ) : (
+              ''
+            )}
           </li>
         ))}
         {data.hasOwnProperty('adicional') ? (
