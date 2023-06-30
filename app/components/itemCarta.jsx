@@ -16,13 +16,7 @@ export default function ItemCarta({ data }) {
         {data.hasOwnProperty('adicional') ? (
           <li className="itemCarta_adicional">
             <h4 className="itemCarta_adicional_titulo">adicional</h4>
-            <ul className="itemCarta_adicional_ul">
-              {data.adicional.map((data) => (
-                <li className="itemCarta_adicional_li" key={data.name}>
-                  {data.name}
-                </li>
-              ))}
-            </ul>
+            <p className="itemCarta_adicional_p">{data.adicional}</p>
           </li>
         ) : null}
       </ul>

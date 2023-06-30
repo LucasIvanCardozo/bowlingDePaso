@@ -8,6 +8,9 @@
 
 .itemCarta_titulo{
   margin: 0;
+  font-size: 2em;
+  color: #252525;
+  font-family: bebasNeue;
   text-transform: uppercase;
   border-bottom: 1px solid #0003;
 }
@@ -17,8 +20,6 @@
   margin: 0;
 
 }
-
-
 
 .itemCarta_adicional_titulo {
   text-transform: capitalize;
@@ -35,15 +36,19 @@
 .itemCarta_li_nombre{
   font-size: 1em;
   margin: 0;
+  font-family: sans-serif;
 }
 
 .itemCarta_li_descripcion{
   font-size: .8em;
   margin: 0;
+  color: #444;
   align-self: flex-end;
+  font-family: sans-serif;
 }
 
 
-.itemCarta_adicional_li {
-  font-size: 1em;
+.itemCarta_adicional_p {
+  font-size: .8em;
+  margin: 0;
 }

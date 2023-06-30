@@ -56,10 +56,10 @@
 }
 .carta {
   position: relative;
-  width: 90%;
   max-width: 1000px;
   min-height: 500px;
   margin: auto;
+  width: 90%;
   padding: 8px;
   background-color: #555;
   border-radius: 20px;
@@ -99,7 +99,15 @@
   padding: 5px 7px;
   margin: 0;
   height: 100%;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, border-radius .3s;
+}
+
+.carta_categoriasLi[open]{
+  background-color: #eeea;
+}
+
+.carta_categoriasLi[open]>.carta_categoriasP{
+  color: #222222;
 }
 
 .carta_categoriasLi:hover {

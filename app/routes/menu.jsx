@@ -37,7 +37,7 @@ export const loader = async () => {
 export default function Menu() {
   const data = useLoaderData();
   const [categoria, setCategoria] = useState(0);
-  const [subcategoria, setSubcategoria] = useState(-1);
+  const [subcategoria, setSubcategoria] = useState(0);
   const [pagina, setPagina] = useState({ categoria: 0, subcategoria: 0 });
 
   return (
@@ -107,6 +107,7 @@ export default function Menu() {
                         : setPagina({ categoria: data.id, subcategoria: 0 }))
                     : null;
                 }}
+                open={pagina.categoria == data.id}
               >
                 <p className="carta_categoriasP">{data.name}</p>
               </li>
