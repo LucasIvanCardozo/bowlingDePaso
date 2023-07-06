@@ -1,5 +1,6 @@
 import { Link } from '@remix-run/react';
 import { useEffect, useState } from 'react';
+import LogoTexto from '../components/logoTexto';
 
 export default function Nav({ width, height }) {
   const [selected, setSelected] = useState(0);
@@ -20,6 +21,9 @@ export default function Nav({ width, height }) {
         onClick={() => (menuOpen ? setMenuOpen(!menuOpen) : null)}
         open={menuOpen}
       ></div>
+      <div className="nav_logo">
+        <LogoTexto color="#eee" />
+      </div>
       <button
         className="nav_button"
         aria-label="boton del menú"
@@ -42,7 +46,7 @@ export default function Nav({ width, height }) {
             INICIO
           </Link>
         </li>
-        <li
+        {/*<li
           className={`nav_li${selected == 2 ? ' nav_selected' : ''}`}
           onClick={() => (setSelected(2), setMenuOpen(false))}
         >
@@ -52,7 +56,7 @@ export default function Nav({ width, height }) {
           >
             PRECIOS
           </Link>
-        </li>
+        </li>*/}
         <li
           className={`nav_li${selected == 3 ? ' nav_selected' : ''}`}
           onClick={() => (setSelected(3), setMenuOpen(false))}

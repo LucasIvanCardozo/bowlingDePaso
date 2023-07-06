@@ -1,6 +1,6 @@
-export default function LogoTexto({ size }) {
+export default function LogoTexto({ color }) {
   return (
-    <div className="logoText" style={{ fontSize: `${size}rem` }}>
+    <div className="logoText" style={{ color: color }}>
       <p className="logoText_bowling">BOWLING</p>
       <p className="logoText_dePaso">DE PASO</p>
     </div>

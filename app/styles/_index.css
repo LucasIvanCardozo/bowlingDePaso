@@ -40,10 +40,11 @@
   align-items: center;
   padding: 50px 0;
   gap: 4em;
-  border-top: 10px solid #ccc;
-  border-bottom: 10px solid #ccc;
+  border-top: 10px solid #555;
+  border-bottom: 10px solid #555;
   background-image: url('~/media/images/fondoInicio.webp');
   background-size: cover;
+  box-shadow: 0 0px 5px 0px #222;
 }
 .section_intro {
   width: 100%;
@@ -209,18 +210,19 @@
 }
 .section_third {
   display: flex;
-  gap: .3em;
+  gap: 0.3em;
   width: 95vw;
   max-width: 900px;
 }
 .section_third_titulo {
-    font-family: bebasNeue;
-    text-transform: uppercase;
-    font-size: 3.5em;
-    filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff);
+  font-family: bebasNeue;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff);
 }
-.section_third_datos {
-}
+
 .section_third_containerImg {
   height: 60vw;
   max-height: 400px;

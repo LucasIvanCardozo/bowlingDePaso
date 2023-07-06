@@ -43,7 +43,6 @@ export default function Menu() {
   return (
     <>
       <main className="main">
-        <LogoTexto size="1.3" />
         <div className="titulo">
           <h1 className="titulo_h">MENÚ</h1>
           <p className="titulo_descripcion">
