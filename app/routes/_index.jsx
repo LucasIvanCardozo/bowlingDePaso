@@ -98,13 +98,14 @@ export default function Index() {
               />
             </div>
             <p className="section_first_p">
-              ¡Tenemos grandes noticias! Nos hemos mudado a un nuevo lugar
-              espectacular, más amplio y completamente renovado para brindarte
-              una experiencia de entretenimiento única. Desde el momento en que
-              ingreses, te maravillarás con su diseño moderno y elegante. Además
-              de nuestras atracciones emocionantes, ahora ofrecemos más opciones
-              gastronómicas y áreas de descanso mejoradas. Ven y descubre todo
-              lo que hemos preparado para ti en nuestra nueva ubicación.
+              ¡Tenemos <b>grandes noticias</b>! Nos hemos mudado a un nuevo
+              lugar <b>espectacular</b>, más amplio y completamente renovado
+              para brindarte una experiencia de entretenimiento <b>única</b>.
+              Desde el momento en que ingreses, te maravillarás con su diseño{' '}
+              <b>moderno</b> y <b>elegante</b>. Además de nuestras atracciones
+              emocionantes, ahora ofrecemos más opciones gastronómicas y áreas
+              de descanso mejoradas. Ven y descubre todo lo que hemos preparado
+              para ti en nuestra nueva ubicación.
             </p>
           </div>
         </section>
@@ -122,10 +123,12 @@ export default function Index() {
               />
             </div>
             <p className="section_second_p">
-              ¡Ven a nuestro bowling y disfruta de una experiencia inolvidable!
-              Celebramos cumpleaños, ofrecemos líneas gratis, diversión
-              garantizada, variedad de comidas, cervezas, cócteles y un ambiente
-              increíble. ¡Te esperamos para pasar momentos geniales!
+              ¡Ven a nuestro <b>bowling</b> y disfruta de una experiencia{' '}
+              <b>inolvidable</b>! Celebramos <b>cumpleaños</b>, ofrecemos{' '}
+              <b>líneas gratis</b>, diversión garantizada, variedad de{' '}
+              <b>comidas</b>, <b>cervezas</b>, <b>cócteles</b> y un ambiente{' '}
+              <b>increíble</b>. ¡Te esperamos para pasar momentos{' '}
+              <b>geniales</b>!
             </p>
           </div>
         </section>
@@ -143,9 +146,9 @@ export default function Index() {
             <h2 className="section_third_titulo">diversión!</h2>{' '}
             <p className="section_third_p">
               Explora una experiencia de entretenimiento completa en nuestro
-              centro. Además del emocionante bowling, encontrarás maquinitas
-              arcade y mesas de pool profesionales. ¡Diversión para todas las
-              edades y gustos en un solo lugar!
+              centro. Además del emocionante <b>bowling</b>, encontrarás
+              <b>maquinitas arcade</b> y <b>mesas de pool profesionales</b>.
+              ¡Diversión para todas las edades y gustos en un solo lugar!
             </p>
           </div>
         </section>
