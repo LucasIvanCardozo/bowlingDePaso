@@ -1,4 +1,6 @@
 .logoText{
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   z-index: 5;
 }
@@ -15,5 +17,7 @@
   margin: 0;
   margin-top: -.5em;
   text-align: end;
-  transform: translateX(.3em);
+  -webkit-transform: translateX(.3em);
+      -ms-transform: translateX(.3em);
+          transform: translateX(.3em);
 }

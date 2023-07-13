@@ -6,7 +6,8 @@ import bolo from '~/media/images/boloBlanco.webp';
 import imagen1 from '~/media/images/imagen1.webp';
 import imagen2 from '~/media/images/imagen2.webp';
 import imagen3 from '~/media/images/maquinita.webp';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import useIntersection from '~/useIntersection';
 
 export const meta = () => {
   return [
@@ -25,6 +26,15 @@ export const links = () => {
 export default function Index() {
   const [width, setWidth] = useState();
   const [height, setHeight] = useState();
+  const [elementRef, isVisible] = useIntersection({
+    treshold: 0.1,
+  });
+  const [elementRef2, isVisible2] = useIntersection({
+    treshold: 0.1,
+  });
+  const [elementRef3, isVisible3] = useIntersection({
+    treshold: 0.1,
+  });
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -89,7 +99,11 @@ export default function Index() {
         <section className="section_first">
           <h2 className="section_first_titulo">nos&nbsp;mudamos!</h2>
           <div className="section_first_datos">
-            <div className="section_first_containerImg">
+            <div
+              className="section_first_containerImg"
+              ref={elementRef}
+              isvisible={isVisible ? 'true' : 'false'}
+            >
               <img
                 className="section_first_img"
                 src={imagen1}
@@ -114,7 +128,11 @@ export default function Index() {
             qué&nbsp;te&nbsp;podemos ofrecer?
           </h2>
           <div className="section_second_datos">
-            <div className="section_second_containerImg">
+            <div
+              className="section_second_containerImg"
+              ref={elementRef2}
+              isvisible={isVisible2 ? 'true' : 'false'}
+            >
               <img
                 className="section_second_img"
                 src={imagen2}
@@ -133,7 +151,11 @@ export default function Index() {
           </div>
         </section>
         <section className="section_third">
-          <div className="section_third_containerImg">
+          <div
+            className="section_third_containerImg"
+            ref={elementRef3}
+            isvisible={isVisible3 ? 'true' : 'false'}
+          >
             <img
               className="section_third_img"
               src={imagen3}

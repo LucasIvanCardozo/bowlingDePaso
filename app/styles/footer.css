@@ -1,15 +1,23 @@
 .footer{
   background-color: #222222;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100px;
 }
 
 .footer_terminos{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 5px;
-  align-items: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   font-size: .9rem;
 }
 
