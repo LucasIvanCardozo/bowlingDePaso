@@ -2,7 +2,7 @@ import { Link } from '@remix-run/react';
 import styles from '~/styles/_index.css';
 import LogoTexto from '../components/logoTexto';
 import estrellas from '~/media/images/estrellas.webp';
-import bolo from '~/media/images/boloBlanco.webp';
+import bolo from '~/media/images/boloBlanco.svg';
 import imagen1 from '~/media/images/imagen1.webp';
 import imagen2 from '~/media/images/imagen2.webp';
 import imagen3 from '~/media/images/maquinita.webp';
@@ -35,6 +35,12 @@ export default function Index() {
   const [elementRef3, isVisible3] = useIntersection({
     treshold: 0.1,
   });
+  const [elementRef4, isVisible4] = useIntersection({
+    treshold: 0,
+  });
+  const [elementRef5, isVisible5] = useIntersection({
+    treshold: 0,
+  });
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -54,7 +60,11 @@ export default function Index() {
   return (
     <>
       <main className="main">
-        <div className="main_banner">
+        <div
+          className="main_banner"
+          ref={elementRef4}
+          isvisible={isVisible4 ? 'true' : 'false'}
+        >
           <img
             className="main_estrellas"
             src={estrellas}
@@ -65,6 +75,8 @@ export default function Index() {
             className="main_bolo"
             src={bolo}
             alt="bolo blanco"
+            ref={elementRef5}
+            isvisible={isVisible5 ? 'true' : 'false'}
             loading="lazy"
           />
         </div>

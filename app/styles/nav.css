@@ -10,6 +10,12 @@
   -webkit-filter: drop-shadow(0 0 5px #000c);
           filter: drop-shadow(0 0 5px #000c);
   height: 60px;
+  transform: translateY(-100%);
+  transition: transform .5s;
+}
+
+.nav[isvisible="true"]{
+  transform: translateY(0%);
 }
 
 .nav_logo {

@@ -15,7 +15,7 @@
 }
 
 .logoText_dePaso {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .titulo {
@@ -26,8 +26,49 @@
 }
 
 .titulo_h {
+  position: relative;
   font-family: bebasNeue;
   font-size: 10em;
+}
+
+.titulo_h::before {
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 20px;
+  z-index: 15;
+  border-radius: 10px;
+  filter: blur(28px);
+  background-color: #fff;
+  opacity: 0;
+  transform: translateX(-0.2em);
+  transition: transform 2s;
+}
+
+.titulo_h[isvisible='true']::before {
+  animation-name: banner;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  transform: translateX(1.8em);
+}
+
+@keyframes banner {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .titulo_descripcion {
@@ -56,12 +97,51 @@
   flex-grow: 1;
   object-fit: contain;
 }
+
+.pizza[isvisible='true'] {
+  animation-name: sticker;
+  animation-duration: 0.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.cerveza[isvisible='true'] {
+  animation-name: sticker;
+  animation-duration: 0.5s;
+  animation-delay: 1.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.helado[isvisible='true'] {
+  animation-name: sticker;
+  animation-duration: 0.5s;
+  animation-delay: 1.9s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes sticker {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .carta {
   position: relative;
   min-height: 500px;
   max-width: 1000px;
   width: 90%;
   margin: auto;
+  margin-bottom: 2em;
   padding: 8px;
   border-radius: 20px;
   box-shadow: 0 0px 5px 0px #222;
@@ -96,18 +176,18 @@
 
 .carta_categoriasLi {
   color: #fff;
-  font-size:1.2em;
+  font-size: 1.2em;
   padding: 5px 7px;
   margin: 0;
   height: 100%;
-  transition: background-color 0.3s, box-shadow 0.3s, border-radius .3s;
+  transition: background-color 0.3s, box-shadow 0.3s, border-radius 0.3s;
 }
 
-.carta_categoriasLi[open]{
+.carta_categoriasLi[open] {
   background-color: #eeea;
 }
 
-.carta_categoriasLi[open]>.carta_categoriasP{
+.carta_categoriasLi[open] > .carta_categoriasP {
   color: #222222;
 }
 
@@ -140,8 +220,8 @@
 }
 
 .carta_subcategoriasUl {
-  letter-spacing: .02em;
-  font-size: .8em;
+  letter-spacing: 0.02em;
+  font-size: 0.8em;
   display: flex;
   justify-content: space-evenly;
   margin: 0;

@@ -7,6 +7,7 @@ import circuloNegado from '~/media/images/circuloNegado.webp';
 import inauguracion from '~/media/images/inauguracion.webp';
 import cierre from '~/media/images/cierre.webp';
 import abrimos from '~/media/images/abrimos.webp';
+import useIntersection from '~/useIntersection';
 
 export const meta = () => {
   return [
@@ -23,17 +24,31 @@ export const links = () => {
 };
 
 export default function Historia() {
+  const [elementRef, isVisible] = useIntersection({
+    treshold: 0,
+  });
+  const [elementRef2, isVisible2] = useIntersection({
+    treshold: 0,
+  });
   return (
     <>
       <main className="main">
-        <div className="main_container">
+        <div
+          className="main_container"
+          ref={elementRef}
+          isvisible={isVisible ? 'true' : 'false'}
+        >
           <img
             src={boloMain}
             alt="pelota de bowling con transparencia"
             className="main_img"
             loading="lazy"
           />
-          <header className="main_header">
+          <header
+            className="main_header"
+            ref={elementRef2}
+            isvisible={isVisible2 ? 'true' : 'false'}
+          >
             <h1 className="main_h1">historia</h1>
             <p className="main_p">de nuestro bowling</p>
           </header>

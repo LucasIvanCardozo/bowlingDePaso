@@ -1,10 +1,14 @@
 import { Link } from '@remix-run/react';
 import { useEffect, useState } from 'react';
 import LogoTexto from '../components/logoTexto';
+import useIntersection from '~/useIntersection';
 
 export default function Nav({ width, height }) {
   const [selected, setSelected] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [elementRef, isVisible] = useIntersection({
+    tresholfd: 0,
+  });
 
   useEffect(() => {
     setMenuOpen(false);
@@ -15,7 +19,11 @@ export default function Nav({ width, height }) {
   }, [selected]);
 
   return (
-    <nav className="nav">
+    <nav
+      className="nav"
+      ref={elementRef}
+      isvisible={isVisible ? 'true' : 'false'}
+    >
       <div
         className="nav_background"
         onClick={() => (menuOpen ? setMenuOpen(!menuOpen) : null)}

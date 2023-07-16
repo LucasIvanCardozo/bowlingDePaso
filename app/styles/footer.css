@@ -7,20 +7,55 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100px;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.footer > p {
+  margin: .5em 0;
+}
+
+.footer_ul{
+  display: flex;
+  position: relative;
+  gap: 2em;
+  height: 2em;
+  filter: grayscale(0);
+  margin: .5em 0;
+}
+
+.footer_li{
+  height: 100%;
+}
+
+.footer_img{
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.footer_socialText{
+  text-align: center;
 }
 
 .footer_terminos{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 5px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-  font-size: .9rem;
+  font-size: .7em;
 }
 
 .footer_terminos_texto{
   margin: 0 3px;
+  text-align: center;
 }
+
+.footer_terminos_texto > b  > a{
+  color: #fff;
+}
+

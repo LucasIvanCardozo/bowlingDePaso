@@ -11,7 +11,8 @@ import cerveza from '~/media/images/cerveza.webp';
 import helado from '~/media/images/helado.webp';
 import { getPosts } from '../db/db';
 import { useEffect, useState } from 'react';
-import LogoTexto from '../components/logoTexto';
+import useIntersection from '~/useIntersection';
+
 export const meta = () => {
   return [
     { title: 'Bowling de Paso - Menu' },
@@ -39,12 +40,30 @@ export default function Menu() {
   const [categoria, setCategoria] = useState(0);
   const [subcategoria, setSubcategoria] = useState(0);
   const [pagina, setPagina] = useState({ categoria: 0, subcategoria: 0 });
+  const [elementRef, isVisible] = useIntersection({
+    treshold: 0,
+  });
+  const [elementRef2, isVisible2] = useIntersection({
+    treshold: 0,
+  });
+  const [elementRef3, isVisible3] = useIntersection({
+    treshold: 0,
+  });
+  const [elementRef4, isVisible4] = useIntersection({
+    treshold: 0,
+  });
 
   return (
     <>
       <main className="main">
         <div className="titulo">
-          <h1 className="titulo_h">MENÚ</h1>
+          <h1
+            className="titulo_h"
+            ref={elementRef}
+            isvisible={isVisible ? 'true' : 'false'}
+          >
+            MENÚ
+          </h1>
           <p className="titulo_descripcion">
             En nuestro Bowling ofrecemos una variedad de comidas y bebidas
             deliciosas para una experiencia completa.
@@ -52,22 +71,28 @@ export default function Menu() {
         </div>
         <div className="stickers">
           <img
-            className="sticker"
+            className="sticker pizza"
             src={pizza}
             alt="pizza sin fondo"
             loading="lazy"
+            ref={elementRef2}
+            isvisible={isVisible2 ? 'true' : 'false'}
           />
           <img
-            className="sticker"
+            className="sticker cerveza"
             src={cerveza}
             alt="cerveza sin fondo"
             loading="lazy"
+            ref={elementRef3}
+            isvisible={isVisible3 ? 'true' : 'false'}
           />
           <img
-            className="sticker"
+            className="sticker helado"
             src={helado}
             alt="helado sin fondo"
             loading="lazy"
+            ref={elementRef4}
+            isvisible={isVisible4 ? 'true' : 'false'}
           />
         </div>
       </main>
