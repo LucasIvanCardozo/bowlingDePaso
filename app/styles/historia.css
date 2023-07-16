@@ -35,6 +35,7 @@
   -o-object-fit: contain;
   object-fit: contain;
   opacity: 0;
+  margin-right: -4.8em;
   transform: translateX(-15em) rotate(-200deg);
 }
 
@@ -100,7 +101,7 @@
 
   100% {
     opacity: 0;
-    transform: translateX(25em);
+    transform: translateX(20em);
   }
 }
 
