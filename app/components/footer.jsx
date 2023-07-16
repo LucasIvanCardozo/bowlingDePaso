@@ -8,7 +8,7 @@ export default function Footer() {
       <ul className="footer_ul" id="contactos">
         <li className="footer_li">
           <a
-            href="https://www.instagram.com/elbowlingdepaso/'"
+            href="https://www.instagram.com/elbowlingdepaso/"
             target="_blank"
             rel="noopener noreferrer"
           >
