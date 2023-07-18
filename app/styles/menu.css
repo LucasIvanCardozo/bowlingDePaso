@@ -4,9 +4,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  min-height: 55vh;
-  height: 80vw;
-  max-height: 60vh;
+  min-height: 45vh;
+  height: 60vw;
+  max-height: 50vh;
   margin: 5vh 0;
 }
 
@@ -199,6 +199,21 @@
 
 .carta_categoriasLi:hover > .carta_categoriasP {
   color: #222222;
+}
+
+.carta_categoriasLi[isvisible='true']{
+  animation-name: categoria;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+
+}
+
+@keyframes categoria {
+  0%{transform: scale(1);}
+  25%{transform: scale(1.2);}
+  50%{transform: scale(0.85);}
+  75%{transform: scale(1.05);}
+  100%{transform: scale(1);}
 }
 
 .carta_categoriasP {

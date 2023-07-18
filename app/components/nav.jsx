@@ -1,7 +1,7 @@
-import { Link } from '@remix-run/react';
-import { useEffect, useState } from 'react';
-import LogoTexto from '../components/logoTexto';
-import useIntersection from '~/useIntersection';
+import { Link } from "@remix-run/react";
+import { useEffect, useState } from "react";
+import LogoTexto from "../components/logoTexto";
+import useIntersection from "~/useIntersection";
 
 export default function Nav({ width, height }) {
   const [selected, setSelected] = useState(0);
@@ -22,7 +22,7 @@ export default function Nav({ width, height }) {
     <nav
       className="nav"
       ref={elementRef}
-      isvisible={isVisible ? 'true' : 'false'}
+      isvisible={isVisible ? "true" : "false"}
     >
       <div
         className="nav_background"
@@ -44,11 +44,11 @@ export default function Nav({ width, height }) {
       </button>
       <ul className="nav_ul" open={menuOpen}>
         <li
-          className={`nav_li${selected == 1 ? ' nav_selected' : ''}`}
+          className={`nav_li${selected == 1 ? " nav_selected" : ""}`}
           onClick={() => (setSelected(1), setMenuOpen(false))}
         >
           <Link
-            className={`nav_link${selected == 1 ? ' nav_link_selected' : ''}`}
+            className={`nav_link${selected == 1 ? " nav_link_selected" : ""}`}
             to="/"
           >
             INICIO
@@ -66,22 +66,22 @@ export default function Nav({ width, height }) {
           </Link>
         </li>*/}
         <li
-          className={`nav_li${selected == 3 ? ' nav_selected' : ''}`}
+          className={`nav_li${selected == 3 ? " nav_selected" : ""}`}
           onClick={() => (setSelected(3), setMenuOpen(false))}
         >
           <Link
-            className={`nav_link${selected == 3 ? ' nav_link_selected' : ''}`}
+            className={`nav_link${selected == 3 ? " nav_link_selected" : ""}`}
             to="/menu"
           >
             MENU
           </Link>
         </li>
         <li
-          className={`nav_li${selected == 4 ? ' nav_selected' : ''}`}
+          className={`nav_li${selected == 4 ? " nav_selected" : ""}`}
           onClick={() => (setSelected(4), setMenuOpen(false))}
         >
           <Link
-            className={`nav_link${selected == 4 ? ' nav_link_selected' : ''}`}
+            className={`nav_link${selected == 4 ? " nav_link_selected" : ""}`}
             to="/historia"
           >
             HISTORIA
@@ -93,6 +93,17 @@ export default function Nav({ width, height }) {
         >
           <Link className="nav_link" to="#contactos">
             CONTACTOS
+          </Link>
+        </li>
+        <li
+          className={`nav_li${selected == 6 ? " nav_selected" : ""}`}
+          onClick={() => (setSelected(6), setMenuOpen(false))}
+        >
+          <Link
+            className={`nav_link${selected == 6 ? " nav_link_selected" : ""}`}
+            to="/premios"
+          >
+            PREMIOS
           </Link>
         </li>
       </ul>
