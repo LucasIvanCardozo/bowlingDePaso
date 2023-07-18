@@ -1,12 +1,13 @@
-.itemCarta{
+.itemCarta {
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 400px;
   margin: 10px 5px;
   flex-grow: 1;
 }
 
-.itemCarta_titulo{
+.itemCarta_titulo {
   margin: 0;
   font-size: 2em;
   color: #252525;
@@ -15,10 +16,9 @@
   border-bottom: 1px solid #0003;
 }
 
-.itemCarta_ul{
+.itemCarta_ul {
   padding: 0;
   margin: 0;
-
 }
 
 .itemCarta_adicional_titulo {
@@ -27,28 +27,49 @@
   margin-top: 5px;
 }
 
-.itemCarta_li{
+.itemCarta_li {
   margin: 1px;
   display: flex;
   flex-wrap: wrap;
 }
-
-.itemCarta_li_nombre{
-  font-size: 1em;
-  margin: 0;
-  font-family: sans-serif;
+.itemCarta_li_data {
+  display: flex;
+  width: 100%;
 }
 
-.itemCarta_li_descripcion{
-  font-size: .8em;
+.itemCarta_li_nombre {
+  font-size: 1em;
+  margin: 0;
+  min-width: max-content;
+  font-family: sans-serif;
+
+}
+
+.itemCarta_li_puntosContenedor{
+  flex-grow: 1;
+  width: min-content;
+  overflow: hidden;
+}
+
+.itemCarta_li_puntos {
+  margin: 0;
+
+}
+
+.itemCarta_li_precio {
+  margin: 0;
+
+}
+
+.itemCarta_li_descripcion {
+  font-size: 0.8em;
   margin: 0;
   color: #444;
   align-self: flex-end;
   font-family: sans-serif;
 }
 
-
 .itemCarta_adicional_p {
-  font-size: .8em;
+  font-size: 0.8em;
   margin: 0;
 }

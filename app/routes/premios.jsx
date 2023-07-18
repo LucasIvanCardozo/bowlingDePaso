@@ -1,8 +1,7 @@
 import { Link } from '@remix-run/react';
 import styles from '~/styles/premios.css';
 import useIntersection from '~/useIntersection';
-import estrellaDorada from '~/media/images/estrellaDorada.png'
-
+import estrellaDorada from '~/media/images/estrellaDorada.png';
 
 export const meta = () => {
   return [
@@ -24,29 +23,27 @@ export default function Premios() {
   });
   return (
     <>
-    <main className="main">
+      <main className="main">
         <div className="titulo">
-          <div className='titulo_estrellas'>
-            <div className='titulo_estrella'>
-              <img  className='titulo_estrellaImg'src={estrellaDorada} alt="" />
+          <div className="titulo_estrellas">
+            <div className="titulo_estrella">
+              <img className="titulo_estrellaImg" src={estrellaDorada} alt="" />
             </div>
-            <div className='titulo_estrella'>
-              <img className='titulo_estrellaImg' src={estrellaDorada} alt="" />
+            <div className="titulo_estrella">
+              <img className="titulo_estrellaImg" src={estrellaDorada} alt="" />
             </div>
-            <div className='titulo_estrella'>
-              <img className='titulo_estrellaImg' src={estrellaDorada} alt="" />
+            <div className="titulo_estrella">
+              <img className="titulo_estrellaImg" src={estrellaDorada} alt="" />
             </div>
           </div>
           <h1
             className="titulo_h"
             ref={elementRef}
-            isvisible={isVisible ? "true" : "false"}
+            isvisible={isVisible ? 'true' : 'false'}
           >
             PREMIOS
           </h1>
-          <p className="titulo_descripcion">
-           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta debitis neque quasi nulla voluptate ducimus nobis qui voluptates et ab
-          </p>
+          <p className="titulo_descripcion">Solo para aficionados</p>
         </div>
       </main>
       <article>
@@ -55,7 +52,10 @@ export default function Premios() {
           <h3>100 palos</h3>
           <p>Llevate un vaso con nuestro logo!</p>
           <h3>130 palos</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nobis ipsum </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nobis
+            ipsum{' '}
+          </p>
         </section>
         <section>
           <h2>Ganadores</h2>

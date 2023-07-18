@@ -19,7 +19,7 @@
 
 .titulo_estrellas{
   position: relative;
-  height: 3em;
+  height: 2.5em;
   display: flex;
   gap: 1em;
 }
@@ -47,7 +47,7 @@
 .titulo_h {
   position: relative;
   font-family: bebasNeue;
-  font-size: 10em;
+  font-size: 8em;
 }
 
 .titulo_h::before {

@@ -5,9 +5,19 @@ export default function ItemCarta({ data }) {
       <ul className="itemCarta_ul">
         {data.data.map((data) => (
           <li className="itemCarta_li" key={data.name}>
-            <p className="itemCarta_li_nombre">‧{data.name}</p>
+            <div className="itemCarta_li_data">
+              <p className="itemCarta_li_nombre">‧{data.name}</p>
+              <div className="itemCarta_li_puntosContenedor">
+                <p className="itemCarta_li_puntos">
+                  ...........................................................................
+                </p>
+              </div>
+              <p className="itemCarta_li_precio">
+                ${data.price ? data.price : 'NULL'}
+              </p>
+            </div>
             {data.description ? (
-              <p className="itemCarta_li_descripcion">({data.description})</p>
+              <p className="itemCarta_li_descripcion"> ({data.description})</p>
             ) : (
               ''
             )}
