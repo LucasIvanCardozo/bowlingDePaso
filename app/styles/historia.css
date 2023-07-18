@@ -36,7 +36,7 @@
   object-fit: contain;
   opacity: 0;
   margin-right: -4.8em;
-  transform: translateX(-15em) rotate(-200deg);
+  transform: translateX(-15em) rotate(-200deg) scale(.5);
 }
 
 .main_container[isvisible='true'] > .main_img {
@@ -47,7 +47,7 @@
 }
 
 @keyframes ball {
-  0% {transform: translateX(-15em) rotate(-200deg);
+  0% {transform: translateX(-15em) rotate(-200deg) scale(.5);
     opacity: 0;
   }
   100% {transform: translateX(0em) rotate(0deg);

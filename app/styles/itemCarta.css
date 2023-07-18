@@ -5,6 +5,7 @@
   max-width: 400px;
   margin: 10px 5px;
   flex-grow: 1;
+  gap: .5em;
 }
 
 .itemCarta_titulo {
@@ -19,6 +20,9 @@
 .itemCarta_ul {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .1em;
 }
 
 .itemCarta_adicional_titulo {

@@ -46,29 +46,30 @@
   filter: blur(28px);
   background-color: #fff;
   opacity: 0;
-  transform: translateX(-6em);
-  transition: transform 2s;
+  transform: translateX(-3em);
 }
 
 .main_banner[isvisible='true']::before {
   animation-name: banner;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
   animation-fill-mode: forwards;
-  transform: translateX(18em);
 }
 
 @keyframes banner {
   0% {
+    transform: translateX(-3em);
     opacity: 0;
   }
   25% {
     opacity: 1;
   }
-  55% {
+  85% {
     opacity: 1;
   }
   100% {
+    transform: translateX(19em);
     opacity: 0;
   }
 }
@@ -80,8 +81,8 @@
   height: 180%;
   -webkit-filter: drop-shadow(1px 1px 2px #000000);
   filter: drop-shadow(1px 1px 2px #000000);
-  transform: translateX(-3em);
-  transform-origin: bottom;
+  transform: translateX(-5em);
+  transform-origin: bottom right;
 }
 
 .main_bolo[isvisible='true'] {
@@ -93,22 +94,22 @@
 
 @keyframes bolo {
   0% {
-    transform: rotate(0deg) translateX(-3em);
+    transform: translateX(-6em) rotate(0deg);
   }
   60% {
-    transform: rotate(25deg) translateX(-1.7em);
+    transform: translateX(-1.7em) rotate(25deg);
   }
   70% {
-    transform: rotate(16deg) translateX(-1.7em);
+    transform: translateX(-1.7em) rotate(16deg);
   }
   80% {
-    transform: rotate(23deg) translateX(-1.7em);
+    transform: translateX(-1.7em) rotate(23deg);
   }
   90% {
-    transform: rotate(18deg) translateX(-1.7em);
+    transform: translateX(-1.7em) rotate(18deg);
   }
   100% {
-    transform: rotate(20deg) translateX(-1.7em);
+    transform: translateX(-1.7em) rotate(20deg);
   }
 }
 .article {
@@ -126,7 +127,7 @@
   gap: 4em;
   border-top: 5px solid #555;
   border-bottom: 5px solid #555;
-  background-image: url('~/media/images/fondoInicio.png');
+  background-image: url('~/media/images/fondoInicio.webp');
   background-size: cover;
   -webkit-box-shadow: 0 0px 5px 0px #222;
   box-shadow: 0 0px 5px 0px #222;

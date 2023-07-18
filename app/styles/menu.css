@@ -205,7 +205,7 @@
 .carta_categoriasLi[isvisible='true'] {
   animation-name: categoria;
   animation-duration: 1s;
-  animation-delay: 1.3s;
+  animation-delay: 1s;
 }
 
 @keyframes categoria {
@@ -277,7 +277,7 @@
   width: 100%;
   background-image: url('~/media/images/fondoCarta.webp');
   background-size: cover;
-  padding: 0 2%;
+  padding: 0 4%;
   gap: 30px;
   padding-top: 2.5em;
   display: flex;
@@ -285,4 +285,22 @@
   min-height: 500px;
   flex-wrap: wrap;
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .carta_categoriasLi {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .carta_categoriasLi {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .carta_categoriasLi {
+    font-size: 1.9rem;
+  }
 }

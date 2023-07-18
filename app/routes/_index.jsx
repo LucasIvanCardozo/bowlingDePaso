@@ -124,21 +124,19 @@ export default function Index() {
               />
             </div>
             <p className="section_first_p">
-              ¡Tenemos <b>grandes noticias</b>! Nos hemos mudado a un nuevo
-              lugar <b>espectacular</b>, más amplio y completamente renovado
-              para brindarte una experiencia de entretenimiento <b>única</b>.
-              Desde el momento en que ingreses, te maravillarás con su diseño{' '}
-              <b>moderno</b> y <b>elegante</b>. Además de nuestras atracciones
-              emocionantes, ahora ofrecemos más opciones gastronómicas y áreas
-              de descanso mejoradas. Ven y descubre todo lo que hemos preparado
-              para ti en nuestra nueva ubicación.
+              ¡Tenemos <b>grandes noticias</b>! Nos mudamos a un nuevo lugar{' '}
+              <b>espectacular</b>, más amplio y completamente renovado para
+              brindarte una experiencia de entretenimiento <b>única</b>. Desde
+              el momento en que ingresás, te va a encantar nuestro diseño{' '}
+              <b>moderno</b> y <b>elegante</b>. Además ahora te ofrecemos más
+              opciones gastronómicas y áreas de descanso mejoradas. Vení y
+              descubrí todo lo que preparamos para vos en nuestra nueva
+              ubicación.
             </p>
           </div>
         </section>
         <section className="section_second">
-          <h2 className="section_second_titulo">
-            qué&nbsp;te&nbsp;podemos ofrecer?
-          </h2>
+          <h2 className="section_second_titulo">qué&nbsp;podemos ofrecerte?</h2>
           <div className="section_second_datos">
             <div
               className="section_second_containerImg"
@@ -153,12 +151,13 @@ export default function Index() {
               />
             </div>
             <p className="section_second_p">
-              ¡Ven a nuestro <b>bowling</b> y disfruta de una experiencia{' '}
-              <b>inolvidable</b>! Celebramos <b>cumpleaños</b>, ofrecemos{' '}
-              <b>líneas gratis</b>, diversión garantizada, variedad de{' '}
-              <b>comidas</b>, <b>cervezas</b>, <b>cócteles</b> y un ambiente{' '}
-              <b>increíble</b>. ¡Te esperamos para pasar momentos{' '}
-              <b>geniales</b>!
+              ¡Vení a nuestro <b>bowling</b> y pasá un rato <b>inolvidable</b>!
+              Podés festejar tu cumpleaños, ganar <b>líneas gratis</b> y
+              disfrutar de diversión asegurada. Además, te ofrecemos una
+              variedad de <b>comidas</b>, <b>cervezas</b> y <b>cócteles</b> en
+              un ambiente <b>increíble</b>. ¡Te esperamos para vivir momentos{' '}
+              <b>geniales</b>! Es el plan perfecto <b>para vos</b>. ¡No te lo
+              podés perder!
             </p>
           </div>
         </section>
@@ -179,10 +178,12 @@ export default function Index() {
           <div className="section_third_datos">
             <h2 className="section_third_titulo">diversión!</h2>{' '}
             <p className="section_third_p">
-              Explora una experiencia de entretenimiento completa en nuestro
-              centro. Además del emocionante <b>bowling</b>, encontrarás
-              <b>maquinitas arcade</b> y <b>mesas de pool profesionales</b>.
-              ¡Diversión para todas las edades y gustos en un solo lugar!
+              ¡Sumérgete en una experiencia de entretenimiento completa en
+              nuestro centro renovado! Aquí encontrarás una emocionante variedad
+              de actividades para disfrutar al máximo. Además del fascinante{' '}
+              <b>bowling</b>, podés deleitarte con nuestras increíbles{' '}
+              <b>maquinitas arcade</b> y nuestra <b>mesa de pool profesional</b>
+              . La diversión está garantizada para todos los gustos y edades.
             </p>
           </div>
         </section>

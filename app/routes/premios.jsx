@@ -1,7 +1,7 @@
 import { Link } from '@remix-run/react';
 import styles from '~/styles/premios.css';
 import useIntersection from '~/useIntersection';
-import estrellaDorada from '~/media/images/estrellaDorada.png';
+import boloDorado from '~/media/images/boloDorado.webp';
 
 export const meta = () => {
   return [
@@ -27,13 +27,13 @@ export default function Premios() {
         <div className="titulo">
           <div className="titulo_estrellas">
             <div className="titulo_estrella">
-              <img className="titulo_estrellaImg" src={estrellaDorada} alt="" />
+              <img className="titulo_estrellaImg" src={boloDorado} alt="" />
             </div>
             <div className="titulo_estrella">
-              <img className="titulo_estrellaImg" src={estrellaDorada} alt="" />
+              <img className="titulo_estrellaImg" src={boloDorado} alt="" />
             </div>
             <div className="titulo_estrella">
-              <img className="titulo_estrellaImg" src={estrellaDorada} alt="" />
+              <img className="titulo_estrellaImg" src={boloDorado} alt="" />
             </div>
           </div>
           <h1
