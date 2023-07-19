@@ -1,22 +1,22 @@
 .confetis {
   position: absolute;
   height: 100px;
+  width: 100%;
 }
 
 .confeti {
   position: absolute;
   left: 0;
-  background-color: #000;
-  height: 0.2em;
-  width: 0.4em;
-  animation-delay: 0.3s;
+  height: 0.3em;
+  width: 0.5em;
   opacity: 0;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
+
 @keyframes x1 {
   to {
-    left: -10em;
+    left: -8em;
     opacity: 1;
   }
 }
@@ -31,6 +31,7 @@
   to {
     left: -5em;
     opacity: 1;
+    
   }
 }
 
@@ -42,7 +43,7 @@
 
 @keyframes x3 {
   to {
-    left: -12em;
+    left: -9em;
     opacity: 1;
   }
 }
@@ -55,7 +56,7 @@
 
 @keyframes x4 {
   to {
-    left: -3em;
+    left: -4em;
     opacity: 1;
   }
 }
@@ -68,7 +69,7 @@
 
 @keyframes x5 {
   to {
-    left: -9em;
+    left: -7em;
     opacity: 1;
   }
 }
@@ -80,7 +81,7 @@
 }
 @keyframes x6 {
   to {
-    left: -6em;
+    left: -5em;
     opacity: 1;
   }
 }
@@ -92,7 +93,7 @@
 }
 @keyframes x7 {
   to {
-    left: -14em;
+    left: -6em;
     opacity: 1;
   }
 }
@@ -104,7 +105,7 @@
 }
 @keyframes x8 {
   to {
-    left: -9em;
+    left: -5em;
     opacity: 1;
   }
 }

@@ -50,6 +50,7 @@ export default function Premios() {
             >
               LOGROS
             </h1>
+            <Confetis direction={true} />
           </div>
           <p className="titulo_descripcion">Solo para aficionados</p>
         </div>

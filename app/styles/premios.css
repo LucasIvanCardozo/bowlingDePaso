@@ -43,6 +43,10 @@
   width: 100%;
   object-fit: contain;
 }
+.titulo_hContenedor{
+display: flex;
+position: relative;
+}
 
 .titulo_h {
   position: relative;

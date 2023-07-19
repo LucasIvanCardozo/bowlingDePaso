@@ -1,74 +1,25 @@
-export default function Confetis() {
-  const colors = [
-    'red',
-    'green',
-    'blue',
-    'blueviolet',
-    'pink',
-    'aqua',
-    'gold',
-    'green',
-  ];
+export default function Confetis({ direction }) {
+  const colors = ['red', 'green', 'blue', 'pink', 'aqua'];
 
   const getTextAnimation = () => {
     let num = Math.random() * 8;
-    return `x${num} .7s linear forwards alternate,
-    y${num} .7s forwards cubic-bezier(0, 1, 1, 1)`;
+    return `x${num} 1.3s linear forwards alternate,
+    y${num} 1.3s forwards cubic-bezier(0, 1, 1, 1)`;
   };
 
   const getRandomStyles = () => {
     return {
-      backgroundColor: colors[Math.floor(Math.random() * colors.length)],
-      top: 100 - Math.floor(Math.random() * 60),
+      backgroundColor: `${colors[Math.floor(Math.random() * colors.length)]}`,
+      top: `${10 - Math.floor(Math.random() * 4)}em`,
       animation: getTextAnimation(),
     };
   };
 
   return (
-    <div className="confetis">
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
+    <div
+      className="confetis"
+      style={direction ? { transform: 'rotateY(180deg)' } : null}
+    >
       <div className="confeti" style={getRandomStyles()}></div>
       <div className="confeti" style={getRandomStyles()}></div>
       <div className="confeti" style={getRandomStyles()}></div>
