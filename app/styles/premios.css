@@ -51,7 +51,7 @@ position: relative;
 .titulo_h {
   position: relative;
   font-family: bebasNeue;
-  font-size: 8em;
+  font-size: 7em;
 }
 
 .titulo_h::before {
@@ -103,4 +103,20 @@ position: relative;
   text-align: center;
 }
 
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .titulo_h {
+    font-size: 7em;
+  }
+}
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .titulo_h {
+    font-size: 8em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .titulo_h {
+    font-size: 9em;
+  }
+}
