@@ -1,17 +1,13 @@
 export default function Confetis({ direction }) {
-  const colors = ['red', 'green', 'blue', 'pink', 'aqua'];
-
-  const getTextAnimation = () => {
-    let num = Math.random() * 8;
-    return `x${num} 1.3s linear forwards alternate,
-    y${num} 1.3s forwards cubic-bezier(0, 1, 1, 1)`;
-  };
+  const colors = ['red', 'green', 'blue', 'orange', 'yellow'];
 
   const getRandomStyles = () => {
+    let num = 1 + Math.floor(Math.random() * 10);
+    let time = 1 + Math.random() * 1.5;
     return {
       backgroundColor: `${colors[Math.floor(Math.random() * colors.length)]}`,
-      top: `${10 - Math.floor(Math.random() * 4)}em`,
-      animation: getTextAnimation(),
+      top: `${50 + Math.floor(Math.random() * 25)}%`,
+      animation: `${time}s ease-out .5s x${num} forwards`,
     };
   };
 
@@ -20,16 +16,6 @@ export default function Confetis({ direction }) {
       className="confetis"
       style={direction ? { transform: 'rotateY(180deg)' } : null}
     >
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
       <div className="confeti" style={getRandomStyles()}></div>
       <div className="confeti" style={getRandomStyles()}></div>
       <div className="confeti" style={getRandomStyles()}></div>

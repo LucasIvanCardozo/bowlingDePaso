@@ -7,111 +7,70 @@
 .confeti {
   position: absolute;
   left: 0;
-  height: 0.3em;
-  width: 0.5em;
+  height: 0.4em;
+  width: 0.6em;
   opacity: 0;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  transform: rotate(90deg) translate(0em) rotate(-90deg);
 }
-
 
 @keyframes x1 {
   to {
-    left: -8em;
     opacity: 1;
+    transform: rotate(5deg) translate(-1em) rotate(180deg) rotateX(720deg);
   }
 }
-
-@keyframes y1 {
-  to {
-    top: -1em;
-  }
-}
-
 @keyframes x2 {
   to {
-    left: -5em;
     opacity: 1;
-    
+    transform: rotate(5deg) translate(-4em) rotate(180deg) rotateX(720deg);
   }
 }
-
-@keyframes y2 {
+@keyframes x3{
   to {
-    top: -2em;
-  }
-}
-
-@keyframes x3 {
-  to {
-    left: -9em;
     opacity: 1;
+    transform: rotate(10deg) translate(-2em) rotate(400deg) rotateX(360deg);
   }
 }
-
-@keyframes y3 {
-  to {
-    top: 0em;
-  }
-}
-
 @keyframes x4 {
   to {
-    left: -4em;
     opacity: 1;
+    transform: rotate(10deg) translate(-5em) rotate(400deg) rotateX(360deg);
   }
 }
-
-@keyframes y4 {
-  to {
-    top: -4em;
-  }
-}
-
 @keyframes x5 {
   to {
-    left: -7em;
     opacity: 1;
-  }
-}
-
-@keyframes y5 {
-  to {
-    top: -5em;
+    transform: rotate(20deg) translate(-3em) rotate(400deg) rotateX(360deg);
   }
 }
 @keyframes x6 {
-  to {
-    left: -5em;
+  to{
     opacity: 1;
-  }
-}
-
-@keyframes y6 {
-  to {
-    top: 1em;
+    transform: rotate(20deg) translate(-6em) rotate(400deg) rotateX(180deg);
   }
 }
 @keyframes x7 {
   to {
-    left: -6em;
     opacity: 1;
-  }
-}
-
-@keyframes y7 {
-  to {
-    top: -2em;
+    transform: rotate(30deg) translate(-4em) rotate(400deg) rotateX(540deg);
   }
 }
 @keyframes x8 {
   to {
-    left: -5em;
     opacity: 1;
+    transform: rotate(30deg) translate(-1em) rotate(400deg) rotateX(540deg);
   }
 }
-
-@keyframes y8 {
+@keyframes x9 {
   to {
-    top: -7em;
+    opacity: 1;
+    transform: rotate(40deg) translate(-5em) rotate(400deg) rotateX(0deg);
+  }
+}
+@keyframes x10 {
+  to {
+    opacity: 1;
+    transform: rotate(40deg) translate(-2em) rotate(400deg) rotateX(0deg);
   }
 }
