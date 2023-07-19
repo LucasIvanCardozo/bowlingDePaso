@@ -1,7 +1,9 @@
 import { Link } from '@remix-run/react';
 import styles from '~/styles/premios.css';
+import stylesConfetis from '~/styles/confetis.css';
 import useIntersection from '~/useIntersection';
 import boloDorado from '~/media/images/boloDorado.webp';
+import Confetis from '../components/confetis';
 
 export const meta = () => {
   return [
@@ -14,7 +16,10 @@ export const meta = () => {
 };
 
 export const links = () => {
-  return [{ rel: 'stylesheet', href: styles }];
+  return [
+    { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: stylesConfetis },
+  ];
 };
 
 export default function Premios() {
@@ -36,13 +41,16 @@ export default function Premios() {
               <img className="titulo_estrellaImg" src={boloDorado} alt="" />
             </div>
           </div>
-          <h1
-            className="titulo_h"
-            ref={elementRef}
-            isvisible={isVisible ? 'true' : 'false'}
-          >
-            PREMIOS
-          </h1>
+          <div className="titulo_hContenedor">
+            <Confetis />
+            <h1
+              className="titulo_h"
+              ref={elementRef}
+              isvisible={isVisible ? 'true' : 'false'}
+            >
+              LOGROS
+            </h1>
+          </div>
           <p className="titulo_descripcion">Solo para aficionados</p>
         </div>
       </main>

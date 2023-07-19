@@ -1,0 +1,116 @@
+.confetis {
+  position: absolute;
+  height: 100px;
+}
+
+.confeti {
+  position: absolute;
+  left: 0;
+  background-color: #000;
+  height: 0.2em;
+  width: 0.4em;
+  animation-delay: 0.3s;
+  opacity: 0;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+@keyframes x1 {
+  to {
+    left: -10em;
+    opacity: 1;
+  }
+}
+
+@keyframes y1 {
+  to {
+    top: -1em;
+  }
+}
+
+@keyframes x2 {
+  to {
+    left: -5em;
+    opacity: 1;
+  }
+}
+
+@keyframes y2 {
+  to {
+    top: -2em;
+  }
+}
+
+@keyframes x3 {
+  to {
+    left: -12em;
+    opacity: 1;
+  }
+}
+
+@keyframes y3 {
+  to {
+    top: 0em;
+  }
+}
+
+@keyframes x4 {
+  to {
+    left: -3em;
+    opacity: 1;
+  }
+}
+
+@keyframes y4 {
+  to {
+    top: -4em;
+  }
+}
+
+@keyframes x5 {
+  to {
+    left: -9em;
+    opacity: 1;
+  }
+}
+
+@keyframes y5 {
+  to {
+    top: -5em;
+  }
+}
+@keyframes x6 {
+  to {
+    left: -6em;
+    opacity: 1;
+  }
+}
+
+@keyframes y6 {
+  to {
+    top: 1em;
+  }
+}
+@keyframes x7 {
+  to {
+    left: -14em;
+    opacity: 1;
+  }
+}
+
+@keyframes y7 {
+  to {
+    top: -2em;
+  }
+}
+@keyframes x8 {
+  to {
+    left: -9em;
+    opacity: 1;
+  }
+}
+
+@keyframes y8 {
+  to {
+    top: -7em;
+  }
+}
