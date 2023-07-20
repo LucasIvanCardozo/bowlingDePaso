@@ -3,7 +3,7 @@
   height: 100px;
   opacity: 0;
   animation-name: confetis, gravedad;
-  animation-duration:6s, 10s;
+  animation-duration: 6s, 10s;
   animation-timing-function: ease-out, ease;
   animation-delay: 0.5s, 1.2s;
   animation-fill-mode: forwards;
@@ -17,7 +17,7 @@
   transform: rotateY(180deg);
   animation-name: confetis, gravedad2;
   animation-duration: 6s, 10s;
-  animation-timing-function: ease-out,ease ;
+  animation-timing-function: ease-out, ease;
   animation-delay: 0.5s, 1.2s;
   animation-fill-mode: forwards;
 }
@@ -50,8 +50,8 @@
 .confeti {
   position: absolute;
   left: 0;
-  height: .5rem;
-  width: .7rem;
+  height: 0.5rem;
+  width: 0.7rem;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   transform: rotate(90deg) translate(0em) rotate(-90deg);
 }
@@ -174,17 +174,23 @@
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .confeti {
     font-size: 1.8rem;
+    height: 0.6rem;
+    width: 0.8rem;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .confeti {
     font-size: 2rem;
+    height: 0.7rem;
+    width: 0.9rem;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .confeti {
     font-size: 2.5rem;
+    height: 0.8rem;
+    width: 1rem;
   }
 }

@@ -5,6 +5,24 @@ import facebook from '~/media/images/facebookLogo.webp';
 export default function Footer() {
   return (
     <footer className="footer">
+      <div className="footer_socialTextContainer">
+        <p className="footer_socialText">
+          No dudes en escribirnos, ¡resolveremos{' '}
+          <b>cualquier consulta que tengas!</b>
+        </p>
+        <p className="footer_socialText">
+          Celebra tu cumpleaños o reserva tus líneas <b>a partir de las 15hs</b>
+        </p>
+        <p className="footer_socialText">
+          <b>Solo por Whatsapp:</b>{' '}
+          <a
+            href="https://api.whatsapp.com/send?phone=542235368630&text=Hola!%20Quer%C3%ADa%20hacer%20una%20reserva%20para%20jugar%20al%20bowling!%F0%9F%8E%B3%F0%9F%8E%B3"
+            target="_blank"
+          >
+            +54 223 536-8630
+          </a>
+        </p>
+      </div>
       <ul className="footer_ul" id="contactos">
         <li className="footer_li">
           <a
@@ -34,10 +52,6 @@ export default function Footer() {
           </a>
         </li>
       </ul>
-      <p className="footer_socialText">
-        No dudes en escribirnos, resolveremos cualquier consulta que usted
-        tenga!
-      </p>
       <hr style={{ width: '80vw' }} />
       <div className="footer_terminos">
         <p className="footer_terminos_texto">©Todos los derechos reservados</p>

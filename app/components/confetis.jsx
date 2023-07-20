@@ -1,5 +1,5 @@
 export default function Confetis({ direction }) {
-  const colors = ['red', 'green', 'blue', 'orange', 'yellow'];
+  const colors = ['red', 'green', 'blue', 'orange', 'yellow', 'gold'];
 
   const getRandomStyles = () => {
     let num = 1 + Math.floor(Math.random().toFixed(2) * 10);
@@ -34,13 +34,6 @@ export default function Confetis({ direction }) {
       <div className="confeti" style={getRandomStyles()}></div>
       <div className="confeti" style={getRandomStyles()}></div>
       <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>{' '}
       <div className="confeti" style={getRandomStyles()}></div>
       <div className="confeti" style={getRandomStyles()}></div>
     </div>

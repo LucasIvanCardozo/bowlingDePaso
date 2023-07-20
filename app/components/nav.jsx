@@ -101,7 +101,7 @@ export default function Nav({ width, height }) {
         >
           <Link
             className={`nav_link${selected == 6 ? ' nav_link_selected' : ''}`}
-            to="/premios"
+            to="/logros"
           >
             LOGROS
           </Link>

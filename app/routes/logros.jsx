@@ -22,7 +22,7 @@ export const links = () => {
   ];
 };
 
-export default function Premios() {
+export default function Logros() {
   const [elementRef, isVisible] = useIntersection({
     treshold: 0,
   });
@@ -52,7 +52,8 @@ export default function Premios() {
             </h1>
             <Confetis direction={true} />
           </div>
-          <p className="titulo_descripcion">Solo para aficionados</p>
+          <p className="titulo_descripcion">Un buen jugador</p>
+          <p className="titulo_descripcion">merece ser recompenzado</p>
         </div>
       </main>
       <article>
