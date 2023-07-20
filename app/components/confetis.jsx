@@ -29,13 +29,6 @@ export default function Confetis({ direction }) {
       <div className="confeti" style={getRandomStyles()}></div>
       <div className="confeti" style={getRandomStyles()}></div>
       <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
-      <div className="confeti" style={getRandomStyles()}></div>
     </div>
   );
 }
