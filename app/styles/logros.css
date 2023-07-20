@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  min-height: 45vh;
+  min-height: 18em;
   height: 60vw;
   max-height: 50vh;
   margin: 5vh 0;
@@ -101,6 +101,59 @@ position: relative;
   width: 70vw;
   max-width: 500px;
   text-align: center;
+}
+
+.article{
+  display: flex;
+  flex-direction: column;
+}
+
+.section_100PalosContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.section_100Palos{
+  display: flex;
+  align-items: flex-end;
+}
+
+.section_100Palos_wind{
+  height: 3em;
+  width: 3em;
+  object-fit: contain;
+}
+
+.section_100Palos_ball{
+  position: relative;
+  height: 10em;
+  width: 10em;
+  margin-left: -1em;
+  margin-right: -2.5em;
+}
+
+.section_100Palos_ballImg{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.section_100Palos_textImg{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+}
+
+.section_100Palos_palos{
+  height: 8.5em;
+  aspect-ratio: 26/25;
+}
+
+.section_100Palos_flecha{
+ height: 5em;
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {

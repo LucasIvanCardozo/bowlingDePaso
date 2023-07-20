@@ -1,7 +1,8 @@
 .main {
   width: 100%;
-  max-height: 60vh;
+  min-height: 15em;
   height: 100vw;
+  max-height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

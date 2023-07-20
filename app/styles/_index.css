@@ -8,6 +8,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  min-height: 18em;
   height: 100vw;
   max-height: 80vh;
   width: 100%;
