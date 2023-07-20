@@ -30,7 +30,7 @@ export default function Premios() {
     <>
       <main className="main">
         <div className="titulo">
-          <div className="titulo_estrellas">
+          {/*<div className="titulo_estrellas">
             <div className="titulo_estrella">
               <img className="titulo_estrellaImg" src={boloDorado} alt="" />
             </div>
@@ -40,7 +40,7 @@ export default function Premios() {
             <div className="titulo_estrella">
               <img className="titulo_estrellaImg" src={boloDorado} alt="" />
             </div>
-          </div>
+  </div>*/}
           <div className="titulo_hContenedor">
             <Confetis />
             <h1
