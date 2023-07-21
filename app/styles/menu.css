@@ -38,7 +38,7 @@
   width: 20px;
   z-index: 15;
   border-radius: 10px;
-  filter: blur(28px);
+  filter: blur(25px);
   background-color: #fff;
   opacity: 0;
   transform: translateX(-0.2em);
@@ -47,10 +47,10 @@
 
 .titulo_h[isvisible='true']::before {
   animation-name: banner;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  transform: translateX(1.8em);
+  transform: translateX(2.5em);
 }
 
 @keyframes banner {
@@ -62,7 +62,7 @@
     opacity: 1;
   }
 
-  55% {
+  75% {
     opacity: 1;
   }
 
@@ -117,7 +117,7 @@
 .helado[isvisible='true'] {
   animation-name: sticker;
   animation-duration: 0.5s;
-  animation-delay: 1.9s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
