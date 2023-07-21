@@ -1,4 +1,5 @@
 .anotacion {
+  font-family: bebasNeue;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -45,10 +46,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  z-index: 10;
   background: radial-gradient(circle, #eee, #d4d4d4);
   width: 12em;
   height: 12em;
   border: 4px solid #000;
+  box-shadow: 0 0 2em .5em #fff;
 }
 
 .special_sup {

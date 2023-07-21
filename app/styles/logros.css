@@ -90,6 +90,7 @@
 }
 
 .article_boxes_score {
+  opacity: .8;
   display: grid;
   grid-template-rows: 9em;
   grid-auto-columns: 9em;

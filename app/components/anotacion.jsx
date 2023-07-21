@@ -21,7 +21,7 @@ export default function Anotacion({ der, izq, sum, width, special }) {
         </div>
         <div class="special_inf">
           <div class="special_inf_text">
-            <p>premios y diversion</p>
+            <p>premios y diversión</p>
           </div>
         </div>
       </div>
