@@ -17,35 +17,9 @@
   margin: 20px 0;
 }
 
-.titulo_estrellas{
-  position: relative;
-  height: 3em;
+.titulo_hContenedor {
   display: flex;
-  gap: .5em;
-}
-
-
-.titulo_estrella{
   position: relative;
-  height: 85%;
-  align-self: flex-end;
-  filter: drop-shadow(0px 1px 1px #000a);
-}
-
-.titulo_estrella:nth-child(2){
-  height: 100%;
-
-}
-
-.titulo_estrellaImg{
-  aspect-ratio: 9/16;
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-.titulo_hContenedor{
-display: flex;
-position: relative;
 }
 
 .titulo_h {
@@ -103,42 +77,172 @@ position: relative;
   text-align: center;
 }
 
-.article{
+.article {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 4em;
 }
 
-.section_100PalosContainer{
+.article_text {
+  width: 80%;
+  max-width: 700px;
+}
+
+.article_title {
+}
+
+.article_description {
+}
+
+.section_100PalosContainer {
   display: flex;
   flex-direction: column;
+  width: 85%;
+  max-width: 800px;
+  font-size: 0.6rem;
 }
 
-.section_100Palos{
+.section_100Palos {
   display: flex;
   align-items: flex-end;
 }
 
-.section_100Palos_wind{
+.section_100Palos_wind {
   height: 3em;
   width: 3em;
   object-fit: contain;
+  opacity: .4;
 }
 
-.section_100Palos_ball{
+.section_100Palos_wind[isvisible='true'] {
+  animation-name: wind;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 5;
+  animation-direction: alternate;
+}
+
+@keyframes wind {
+  to{
+    opacity: 1;
+  }
+}
+
+.section_100Palos_ball {
   position: relative;
   height: 10em;
   width: 10em;
-  margin-left: -1em;
+  margin-left: -1.3em;
   margin-right: -2.5em;
 }
 
-.section_100Palos_ballImg{
+.section_100Palos_ballImg {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transform: translateX(-1.5em);
+}
+
+.section_100Palos_ballImg[isvisible='true'] {
+  animation-name: ball;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ball {
+  to {
+    transform: translateX(0em) rotate(1080deg);
+  }
+}
+
+.section_100Palos_textImg {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+  opacity: 0;
+}
+
+.section_100Palos_textImg[isvisible='true'] {
+  animation-name: text;
+  animation-duration: .8s;
+  animation-delay: 1.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes text {
+  to {
+    opacity: 1;
+  }
+}
+
+.section_100Palos_palos {
+  height: 8.5em;
+  aspect-ratio: 26/25;
+}
+
+.section_100Palos_flecha {
+  height: 5em;
+}
+
+.section_130PalosContainer {
+  position: relative;
+  display: flex;
+  width: 85%;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 800px;
+  font-size: 0.6rem;
+}
+
+.comingsoon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.comingsoon_text {
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 4em;
+  padding: 0.3em;
+  margin: 0;
+  color: #eee;
+  border-radius: 10px;
+  background-color: #777b;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  transform-origin: center;
+}
+
+.section_130Palos_wind {
+  height: 5em;
+  width: 5em;
+  object-fit: contain;
+  transform: rotateY(180deg);
+}
+
+.section_130Palos_ball {
+  position: relative;
+  height: 17em;
+  width: 17em;
+  margin-left: -4.8em;
+  margin-right: -2.5em;
+}
+
+.section_130Palos_ballImg {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
 
-.section_100Palos_textImg{
+.section_130Palos_textImg {
   position: absolute;
   top: 10%;
   left: 10%;
@@ -147,18 +251,20 @@ position: relative;
   object-fit: contain;
 }
 
-.section_100Palos_palos{
-  height: 8.5em;
+.section_130Palos_palos {
+  height: 16em;
   aspect-ratio: 26/25;
-}
-
-.section_100Palos_flecha{
- height: 5em;
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .titulo_h {
     font-size: 7em;
+  }
+  .section_100PalosContainer {
+    font-size: 0.75em;
+  }
+  .section_130PalosContainer {
+    font-size: 0.75rem;
   }
 }
 
@@ -166,10 +272,22 @@ position: relative;
   .titulo_h {
     font-size: 8em;
   }
+  .section_100PalosContainer {
+    font-size: 0.9rem;
+  }
+  .section_130PalosContainer {
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (min-width: 1025px) {
   .titulo_h {
     font-size: 9em;
+  }
+  .section_100PalosContainer {
+    font-size: 1em;
+  }
+  .section_130PalosContainer {
+    font-size: 1rem;
   }
 }

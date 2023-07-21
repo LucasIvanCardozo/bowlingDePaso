@@ -1,7 +1,7 @@
 import { Link } from '@remix-run/react';
 import styles from '~/styles/_index.css';
 import LogoTexto from '../components/logoTexto';
-import estrellas from '~/media/images/boloBlanco.svg';
+import estrellas from '~/media/images/estrellas.svg';
 import bolo from '~/media/images/boloBlanco.svg';
 import imagen1 from '~/media/images/imagen1.webp';
 import imagen2 from '~/media/images/imagen2.webp';
