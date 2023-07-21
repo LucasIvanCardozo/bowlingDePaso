@@ -7,14 +7,22 @@ export default function Anotacion({ der, izq, sum, width, special }) {
         <div class="special_sup">
           <div class="special_box"></div>
           <div class="special_box">
-            <p class="special_text">{der}</p>
+            <div class="special_text">
+              <p>demostrá</p>
+              <p>destreza</p>
+            </div>
           </div>
           <div class="special_box">
-            <p class="special_text">{izq}</p>
+            <div class="special_text">
+              <p>completá</p>
+              <p>misiones</p>
+            </div>
           </div>
         </div>
         <div class="special_inf">
-          <p class="special_text">{sum}</p>
+          <div class="special_inf_text">
+            <p>premios y diversion</p>
+          </div>
         </div>
       </div>
     ) : (
