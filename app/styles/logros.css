@@ -90,7 +90,7 @@
 }
 
 .article_boxes_score {
-  opacity: .8;
+  opacity: .7;
   display: grid;
   grid-template-rows: 9em;
   grid-auto-columns: 9em;
@@ -103,6 +103,7 @@
 .section_100PalosContainer {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   width: 85%;
   max-width: 800px;
   font-size: 0.6rem;
@@ -193,6 +194,7 @@
 
 .section_100Palos_flecha {
   height: 5em;
+  transform: scaleX(1);
 }
 
 .section_130PalosContainer {
