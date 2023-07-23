@@ -1,25 +1,27 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
-
-export default function Anotacion({ name, age, img, record }) {
+export default function Tarjeta({ name, lastName, age, img, record }) {
   return (
-    <div>
-      <div>
-        <div>
-          <img src={img} alt="" />
+    <>
+      <div className="section_betters_front">
+        <img
+          className="section_betters_img"
+          src={img}
+          alt={`Imagen de ${name}`}
+        />
+        <button className="section_betters_info">
+          <p className="section_betters_info_p">ver info</p>
+        </button>
+      </div>
+      <div className="section_betters_back">
+        <div className="section_betters_data">
+          <p className="section_betters_name">
+            {name} {lastName}
+          </p>
+          <p className="section_betters_age">{age} años</p>
         </div>
-        <div>
-          <p>ver info</p>
+        <div className="section_betters_record">
+          <p className="section_betters_record_p">{record}</p>
         </div>
       </div>
-      <div>
-        <div>
-          <p>{name}</p>
-          <p>{age} años</p>
-        </div>
-        <div>
-          <p>{record}</p>
-        </div>
-      </div>
-    </div>
+    </>
   );
 }

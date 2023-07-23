@@ -4,6 +4,7 @@ import { getRecords } from '../db/dbRecords';
 import styles from '~/styles/logros.css';
 import stylesConfetis from '~/styles/confetis.css';
 import stylesAnotacion from '~/styles/anotacion.css';
+import stylesTarjeta from '~/styles/tarjeta.css';
 import useIntersection from '~/useIntersection';
 import boloDorado from '~/media/images/boloDorado.webp';
 import Confetis from '../components/confetis';
@@ -16,6 +17,7 @@ import text130 from '~/media/images/130PalosTexto.svg';
 import flecha from '~/media/images/flecha.svg';
 import Anotacion from '../components/anotacion';
 import { useEffect, useState } from 'react';
+import Tarjeta from '../components/tarjeta';
 
 export const meta = () => {
   return [
@@ -32,6 +34,7 @@ export const links = () => {
     { rel: 'stylesheet', href: styles },
     { rel: 'stylesheet', href: stylesConfetis },
     { rel: 'stylesheet', href: stylesAnotacion },
+    { rel: 'stylesheet', href: stylesTarjeta },
   ];
 };
 
@@ -49,14 +52,6 @@ export default function Logros() {
     treshold: 0,
   });
   const [width, setWidth] = useState();
-  const dateNow = Date.now();
-  const betterPeaople = data
-    .filter((person) => {
-      const dateParse = Date.parse(person.date);
-      return dateNow - dateParse < 2592000000 && dateNow - dateParse > 0;
-    })
-    .sort((a, b) => (a.record > b.record ? -1 : 1))
-    .slice(0, 3);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -70,9 +65,6 @@ export default function Logros() {
   const handleResize = () => {
     setWidth(window.innerWidth);
   };
-  useEffect(() => {
-    console.log(betterPeaople);
-  }, []);
   useEffect(() => {
     for (let i = 0; i < 10; i++) {
       if (i == 0) {
@@ -224,8 +216,20 @@ export default function Logros() {
             </p>
           </div>
         </section>
-        <section>
-          <div></div>
+        <section className="section_records">
+          <ul className="section_betters">
+            {data.map(({ name, lastName, age, img, record }) => (
+              <li className="section_betters_card" key={name}>
+                <Tarjeta
+                  name={name}
+                  lastName={lastName}
+                  age={age}
+                  img={`./records/${name}${lastName}.webp`}
+                  record={record}
+                />
+              </li>
+            ))}
+          </ul>
         </section>
       </article>
     </>
