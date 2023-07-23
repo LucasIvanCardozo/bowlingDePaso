@@ -90,7 +90,7 @@
 }
 
 .article_boxes_score {
-  opacity: .7;
+  opacity: 0.7;
   display: grid;
   grid-template-rows: 9em;
   grid-auto-columns: 9em;
@@ -104,9 +104,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 85%;
+  width: 20rem;
   max-width: 800px;
-  font-size: 0.6rem;
+  font-size: .6rem;
 }
 
 .section_100Palos {
@@ -276,6 +276,9 @@
   .article_boxes {
     font-size: 1.2rem;
   }
+  .section_100PalosContainer {
+      width: 27rem;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -291,6 +294,9 @@
   .article_boxes {
     font-size: 1.5rem;
   }
+  .section_100PalosContainer {
+      width: 36rem;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -305,5 +311,8 @@
   }
   .article_boxes {
     font-size: 2.1rem;
+  }
+  .section_100PalosContainer {
+      width: 50rem;
   }
 }

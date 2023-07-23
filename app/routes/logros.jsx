@@ -1,4 +1,6 @@
-import { Link } from '@remix-run/react';
+import { json } from '@remix-run/node';
+import { useLoaderData } from '@remix-run/react';
+import { getRecords } from '../db/dbRecords';
 import styles from '~/styles/logros.css';
 import stylesConfetis from '~/styles/confetis.css';
 import stylesAnotacion from '~/styles/anotacion.css';
@@ -33,7 +35,12 @@ export const links = () => {
   ];
 };
 
+export const loader = async () => {
+  return json(await getRecords());
+};
+
 export default function Logros() {
+  const data = useLoaderData();
   const [scoreboard, setScoreboard] = useState([]);
   const [elementRef, isVisible] = useIntersection({
     treshold: 0,
@@ -41,8 +48,15 @@ export default function Logros() {
   const [elementRef2, isVisible2] = useIntersection({
     treshold: 0,
   });
-
   const [width, setWidth] = useState();
+  const dateNow = Date.now();
+  const betterPeaople = data
+    .filter((person) => {
+      const dateParse = Date.parse(person.date);
+      return dateNow - dateParse < 2592000000 && dateNow - dateParse > 0;
+    })
+    .sort((a, b) => (a.record > b.record ? -1 : 1))
+    .slice(0, 3);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -56,20 +70,20 @@ export default function Logros() {
   const handleResize = () => {
     setWidth(window.innerWidth);
   };
-
+  useEffect(() => {
+    console.log(betterPeaople);
+  }, []);
   useEffect(() => {
     for (let i = 0; i < 10; i++) {
       if (i == 0) {
         const randomDer = Math.floor(Math.random() * 8);
         const randomIzq = Math.floor(Math.random() * 9 - randomDer);
         const suma = randomDer + randomIzq;
-        console.log(`${i}: ${suma}`);
         scoreboard.push({ der: randomDer, izq: randomIzq, sum: suma });
       } else {
         const randomDer = Math.floor(Math.random() * 8);
         const randomIzq = Math.floor(Math.random() * (10 - randomDer));
         const sumaTotal = randomIzq + randomDer + scoreboard[i - 1].sum;
-        console.log(`${i}: ${sumaTotal}`);
         scoreboard.push({ der: randomDer, izq: randomIzq, sum: sumaTotal });
       }
     }
@@ -209,6 +223,9 @@ export default function Logros() {
               <b>PROXIMAMENTE</b>
             </p>
           </div>
+        </section>
+        <section>
+          <div></div>
         </section>
       </article>
     </>
