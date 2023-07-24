@@ -5,6 +5,7 @@ import styles from '~/styles/logros.css';
 import stylesConfetis from '~/styles/confetis.css';
 import stylesAnotacion from '~/styles/anotacion.css';
 import stylesTarjeta from '~/styles/tarjeta.css';
+import stylesTarjetaAlbum from '~/styles/tarjetaAlbum.css';
 import useIntersection from '~/useIntersection';
 import boloDorado from '~/media/images/boloDorado.webp';
 import Confetis from '../components/confetis';
@@ -18,6 +19,7 @@ import flecha from '~/media/images/flecha.svg';
 import Anotacion from '../components/anotacion';
 import { useEffect, useState } from 'react';
 import Tarjeta from '../components/tarjeta';
+import TarjetaAlbum from '../components/tarjetaAlbum';
 
 export const meta = () => {
   return [
@@ -35,6 +37,7 @@ export const links = () => {
     { rel: 'stylesheet', href: stylesConfetis },
     { rel: 'stylesheet', href: stylesAnotacion },
     { rel: 'stylesheet', href: stylesTarjeta },
+    { rel: 'stylesheet', href: stylesTarjetaAlbum },
   ];
 };
 
@@ -43,7 +46,7 @@ export const loader = async () => {
 };
 
 export default function Logros() {
-  const data = useLoaderData();
+  const [winners, totalpeople] = useLoaderData();
   const [scoreboard, setScoreboard] = useState([]);
   const [elementRef, isVisible] = useIntersection({
     treshold: 0,
@@ -65,6 +68,7 @@ export default function Logros() {
   const handleResize = () => {
     setWidth(window.innerWidth);
   };
+
   useEffect(() => {
     for (let i = 0; i < 10; i++) {
       if (i == 0) {
@@ -79,6 +83,10 @@ export default function Logros() {
         scoreboard.push({ der: randomDer, izq: randomIzq, sum: sumaTotal });
       }
     }
+  }, []);
+
+  useEffect(() => {
+    console.log(totalpeople);
   }, []);
 
   return (
@@ -218,16 +226,30 @@ export default function Logros() {
         </section>
         <section className="section_records">
           <ul className="section_betters">
-            {data.map(({ name, lastName, age, img, record }) => (
-              <li className="section_betters_card" key={name}>
-                <Tarjeta
-                  name={name}
-                  lastName={lastName}
-                  age={age}
-                  img={`./records/${name}${lastName}.webp`}
-                  record={record}
-                />
-              </li>
+            {winners.map(({ name, lastName, age, record }) => (
+              <Tarjeta
+                key={name}
+                name={name}
+                lastName={lastName}
+                age={age}
+                img={`./records/${name}${lastName}.webp`}
+                record={record}
+              />
+            ))}
+          </ul>
+        </section>
+        <section className="section_album">
+          <h2 className="section_album_title">grandes jugadores del mes</h2>
+          <ul className="section_album_ul">
+            {totalpeople.map(({ name, lastName, age, record }) => (
+              <TarjetaAlbum
+                key={name}
+                name={name}
+                lastName={lastName}
+                age={age}
+                img={`./records/${name}${lastName}.webp`}
+                record={record}
+              />
             ))}
           </ul>
         </section>

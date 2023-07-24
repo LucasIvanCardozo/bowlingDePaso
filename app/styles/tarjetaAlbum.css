@@ -1,0 +1,85 @@
+.section_album{
+font-size: 1rem;
+display: flex;
+flex-direction: column;
+padding: .5em;
+width: 75%;
+max-width: 650px;
+font-family: bebasNeue;
+background-color: #444;
+margin-bottom: 3em;
+}
+
+.section_album_title{
+  font-size: 2em;
+ text-align: center;
+ text-transform: uppercase;
+ color: #ddd;
+}
+
+.section_album_ul{
+  display: grid;
+  gap: .5em;
+  margin: .5em 0;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-flow: row
+
+}
+
+.section_album_li{
+  background-color: #222;
+  padding: .2em;
+  aspect-ratio: 9/16;
+  color:#ddd;
+
+}
+
+.section_album_img{
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 9/16;
+}
+
+.section_album_data{}
+
+
+.section_album_name{
+  margin: 0;
+}
+.section_album_subLi{
+  display: flex;
+  justify-content: space-between;
+}
+
+.section_album_age{
+  margin: 0;
+}
+
+.section_album_record{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.section_album_score{
+  margin: 0;
+}
+
+.section_album_pinImg{}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .section_album {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .section_album {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .section_album {
+    font-size: 1.3em;
+  }
+}
