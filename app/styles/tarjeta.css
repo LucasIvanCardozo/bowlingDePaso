@@ -75,6 +75,7 @@
 
 .section_betters_card {
   position: relative;
+  cursor: pointer;
   padding: 0.3em;
   padding-bottom: 0;
   width: 25vw;
@@ -174,13 +175,24 @@
   letter-spacing: .2em;
 }
 .section_betters_record {
+  position: relative;
   display: flex;
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0 0 2px #fff9) drop-shadow(2px 2px 0px #000);
 }
+.section_betters_pin{
+  position: absolute;
+  filter: invert(1);
+  opacity: .3;
+  top: 50%;
+  left: 50%;
+  height: 80%;
+  transform: translate(-50%,-50%);
+}
+
 .section_betters_record_p {
+  filter: drop-shadow(0 0 2px #fff9) drop-shadow(2px 2px 0px #000);
   font-size: 4em;
   margin: 0;
 }

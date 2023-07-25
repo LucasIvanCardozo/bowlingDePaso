@@ -88,14 +88,6 @@ export default function Nav({ width, height }) {
           </Link>
         </li>
         <li
-          className="nav_li"
-          onClick={() => (setSelected(5), setMenuOpen(false))}
-        >
-          <Link className="nav_link" to="#contactos">
-            CONTACTOS
-          </Link>
-        </li>
-        <li
           className={`nav_li${selected == 6 ? ' nav_selected' : ''}`}
           onClick={() => (setSelected(6), setMenuOpen(false))}
         >
@@ -104,6 +96,15 @@ export default function Nav({ width, height }) {
             to="/logros"
           >
             LOGROS
+          </Link>
+        </li>
+
+        <li
+          className="nav_li"
+          onClick={() => (setSelected(5), setMenuOpen(false))}
+        >
+          <Link className="nav_link" to="#contactos">
+            CONTACTOS
           </Link>
         </li>
       </ul>

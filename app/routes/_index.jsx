@@ -87,8 +87,7 @@ export default function Index() {
         <section className="section_intro">
           <div className="section_intro_text">
             <p className="section_intro_text_p1">
-              En nuestro Bowling, sabemos que lo importante es disfrutar de la
-              compañía mutua.
+              Sabemos que lo importante es disfrutar de la compañía mutua.
             </p>
             <p className="section_intro_text_p2">
               ¡Por eso es el lugar ideal para pasar un rato agradable todos

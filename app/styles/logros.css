@@ -81,7 +81,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4em;
+  gap: 6em;
 }
 
 .article_boxes {
@@ -106,10 +106,15 @@
   justify-content: space-evenly;
   width: 20rem;
   max-width: 800px;
-  font-size: .6rem;
+  font-size: 0.6rem;
 }
 
 .section_100Palos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.section_100Palos_animation {
   display: flex;
   align-items: flex-end;
 }
@@ -197,6 +202,10 @@
   transform: scaleX(1);
 }
 
+.section_100Palos_vaso {
+  height: 10em;
+}
+
 .section_130PalosContainer {
   position: relative;
   display: flex;
@@ -263,6 +272,39 @@
   aspect-ratio: 26/25;
 }
 
+.article_records {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section_records_nube {
+  position: relative;
+  aspect-ratio: 16/7;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_records_nubeImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  z-index: -1;
+  filter: drop-shadow(1px 1px 2px #000);
+}
+
+.section_records_title {
+  margin-top: .6em;
+  font-family: bebasNeue;
+  font-size: 1.9em;
+  text-align: center;
+}
+
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .titulo_h {
     font-size: 7em;
@@ -277,7 +319,7 @@
     font-size: 1.2rem;
   }
   .section_100PalosContainer {
-      width: 27rem;
+    width: 27rem;
   }
 }
 
@@ -295,7 +337,7 @@
     font-size: 1.5rem;
   }
   .section_100PalosContainer {
-      width: 36rem;
+    width: 36rem;
   }
 }
 
@@ -313,6 +355,6 @@
     font-size: 2.1rem;
   }
   .section_100PalosContainer {
-      width: 50rem;
+    width: 50rem;
   }
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import bolo from '~/media/images/boloBlanco.svg';
 
 export default function Tarjeta({ name, lastName, age, img, record }) {
   const [verInfo, setVerInfo] = useState(false);
@@ -22,6 +23,7 @@ export default function Tarjeta({ name, lastName, age, img, record }) {
         <img
           className="section_betters_img"
           src={img}
+          loading="lazy"
           alt={`Imagen de ${name}`}
         />
         <button className="section_betters_info">
@@ -39,6 +41,12 @@ export default function Tarjeta({ name, lastName, age, img, record }) {
           <p className="section_betters_age">{age} años</p>
         </div>
         <div className="section_betters_record">
+          <img
+            className="section_betters_pin"
+            src={bolo}
+            alt=""
+            loading="lazy"
+          />
           <p className="section_betters_record_p">{record}</p>
         </div>
       </div>

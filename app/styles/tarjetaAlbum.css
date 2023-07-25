@@ -6,15 +6,16 @@ padding: .5em;
 width: 75%;
 max-width: 650px;
 font-family: bebasNeue;
-background-color: #444;
+background-color: #424242;
 margin-bottom: 3em;
 }
 
 .section_album_title{
-  font-size: 2em;
+  font-size: 1.5em;
  text-align: center;
  text-transform: uppercase;
- color: #ddd;
+ letter-spacing: .05em;
+ color: #c3c3c3;
 }
 
 .section_album_ul{
@@ -27,7 +28,7 @@ margin-bottom: 3em;
 }
 
 .section_album_li{
-  background-color: #222;
+  background-color: #2e2d2d;
   padding: .2em;
   aspect-ratio: 9/16;
   color:#ddd;
@@ -40,14 +41,18 @@ margin-bottom: 3em;
   aspect-ratio: 9/16;
 }
 
-.section_album_data{}
+.section_album_data{
+  font-size: .9em;
+}
 
 
 .section_album_name{
   margin: 0;
 }
 .section_album_subLi{
+  position: relative;
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
@@ -57,14 +62,24 @@ margin-bottom: 3em;
 
 .section_album_record{
   display: flex;
-  justify-content: space-evenly;
+  font-size: 1.1em;
+  gap: .1em;
+  color: #e7c730;
 }
 
 .section_album_score{
   margin: 0;
 }
 
-.section_album_pinImg{}
+.section_album_pin{
+  height: .78em;
+  filter: invert(1) invert(92%) sepia(61%) saturate(7411%) hue-rotate(331deg) brightness(96%) contrast(88%);
+}
+
+.section_album_pinImg{
+  height: 100%;
+  object-fit: contain;
+}
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .section_album {

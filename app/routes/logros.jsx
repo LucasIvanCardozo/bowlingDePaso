@@ -7,12 +7,14 @@ import stylesAnotacion from '~/styles/anotacion.css';
 import stylesTarjeta from '~/styles/tarjeta.css';
 import stylesTarjetaAlbum from '~/styles/tarjetaAlbum.css';
 import useIntersection from '~/useIntersection';
+import nube from '~/media/images/nube.webp';
 import boloDorado from '~/media/images/boloDorado.webp';
 import Confetis from '../components/confetis';
 import wind from '~/media/images/viento.svg';
 import ball from '~/media/images/elipse.svg';
 import text100 from '~/media/images/100PalosTexto.svg';
 import palos100 from '~/media/images/100Palos.svg';
+import vaso100Palos from '~/media/images/vaso100Palos.webp';
 import palos130 from '~/media/images/130Palos.svg';
 import text130 from '~/media/images/130PalosTexto.svg';
 import flecha from '~/media/images/flecha.svg';
@@ -186,29 +188,31 @@ export default function Logros() {
         <section className="section_100PalosContainer">
           <img className="section_100Palos_flecha" src={flecha} alt="" />
           <div className="section_100Palos">
-            <img
-              className="section_100Palos_wind"
-              src={wind}
-              alt=""
-              ref={elementRef2}
-              isvisible={isVisible2 ? 'true' : 'false'}
-            />
-            <div className="section_100Palos_ball">
+            <div className="section_100Palos_animation">
               <img
-                className="section_100Palos_ballImg"
-                src={ball}
+                className="section_100Palos_wind"
+                src={wind}
                 alt=""
+                ref={elementRef2}
                 isvisible={isVisible2 ? 'true' : 'false'}
               />
-              <img
-                className="section_100Palos_textImg"
-                src={text100}
-                alt=""
-                isvisible={isVisible2 ? 'true' : 'false'}
-              />
+              <div className="section_100Palos_ball">
+                <img
+                  className="section_100Palos_ballImg"
+                  src={ball}
+                  alt=""
+                  isvisible={isVisible2 ? 'true' : 'false'}
+                />
+                <img
+                  className="section_100Palos_textImg"
+                  src={text100}
+                  alt=""
+                  isvisible={isVisible2 ? 'true' : 'false'}
+                />
+              </div>
+              <img className="section_100Palos_palos" src={palos100} alt="" />
             </div>
-            <img className="section_100Palos_palos" src={palos100} alt="" />
-            <img src="" alt="" />
+            <img className="section_100Palos_vaso" src={vaso100Palos} alt="" />
           </div>
         </section>
         <section className="section_130PalosContainer">
@@ -224,35 +228,46 @@ export default function Logros() {
             </p>
           </div>
         </section>
-        <section className="section_records">
-          <ul className="section_betters">
-            {winners.map(({ name, lastName, age, record }) => (
-              <Tarjeta
-                key={name}
-                name={name}
-                lastName={lastName}
-                age={age}
-                img={`./records/${name}${lastName}.webp`}
-                record={record}
-              />
-            ))}
-          </ul>
-        </section>
-        <section className="section_album">
-          <h2 className="section_album_title">grandes jugadores del mes</h2>
-          <ul className="section_album_ul">
-            {totalpeople.map(({ name, lastName, age, record }) => (
-              <TarjetaAlbum
-                key={name}
-                name={name}
-                lastName={lastName}
-                age={age}
-                img={`./records/${name}${lastName}.webp`}
-                record={record}
-              />
-            ))}
-          </ul>
-        </section>
+        <article className="article_records">
+          <section className="section_records">
+            <div className="section_records_nube">
+              <img className="section_records_nubeImg" src={nube} alt="" />
+              <h2 className="section_records_title">
+                los cracks de <br />
+                {Intl.DateTimeFormat('es-ES', { month: 'long' }).format(
+                  new Date() - 2592000000
+                )}
+              </h2>
+            </div>
+            <ul className="section_betters">
+              {winners.map(({ name, lastName, age, record }) => (
+                <Tarjeta
+                  key={name}
+                  name={name}
+                  lastName={lastName}
+                  age={age}
+                  img={`./records/${name}${lastName}.webp`}
+                  record={record}
+                />
+              ))}
+            </ul>
+          </section>
+          <section className="section_album">
+            <h2 className="section_album_title">grandes jugadores del mes</h2>
+            <ul className="section_album_ul">
+              {totalpeople.map(({ name, lastName, age, record }) => (
+                <TarjetaAlbum
+                  key={name}
+                  name={name}
+                  lastName={lastName}
+                  age={age}
+                  img={`./records/${name}${lastName}.webp`}
+                  record={record}
+                />
+              ))}
+            </ul>
+          </section>
+        </article>
       </article>
     </>
   );

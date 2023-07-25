@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import bolo from '~/media/images/boloBlanco.svg';
 
 export default function TarjetaAlbum({ name, lastName, age, img, record }) {
   return (
@@ -12,7 +13,9 @@ export default function TarjetaAlbum({ name, lastName, age, img, record }) {
           <p className="section_album_age">{age} años</p>
           <div className="section_album_record">
             <p className="section_album_score">{record}</p>
-            <img className="section_album_pinImg" src="" alt="" />
+            <div className="section_album_pin">
+              <img className="section_album_pinImg" src={bolo} alt="" />
+            </div>
           </div>
         </div>
       </div>
