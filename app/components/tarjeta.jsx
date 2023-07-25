@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import bolo from '~/media/images/boloBlanco.svg';
 
-export default function Tarjeta({ name, lastName, age, img, record }) {
+export default function Tarjeta({ name, lastName, age, img, record, pos }) {
   const [verInfo, setVerInfo] = useState(false);
   const [waitTransition, setWaitTransition] = useState(false);
 
@@ -16,6 +16,12 @@ export default function Tarjeta({ name, lastName, age, img, record }) {
       verinfo={verInfo ? 'true' : undefined}
       onClick={!waitTransition ? handleTrans : null}
     >
+      <img
+        className="section_betters_medal"
+        src={`./medals/medal${pos}.webp`}
+        alt=""
+        verinfo={verInfo ? 'true' : undefined}
+      />
       <div
         className="section_betters_front"
         verinfo={verInfo ? 'true' : undefined}

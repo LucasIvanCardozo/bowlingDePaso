@@ -240,7 +240,7 @@ export default function Logros() {
               </h2>
             </div>
             <ul className="section_betters">
-              {winners.map(({ name, lastName, age, record }) => (
+              {winners.map(({ name, lastName, age, record }, index) => (
                 <Tarjeta
                   key={name}
                   name={name}
@@ -248,6 +248,7 @@ export default function Logros() {
                   age={age}
                   img={`./records/${name}${lastName}.webp`}
                   record={record}
+                  pos={index + 1}
                 />
               ))}
             </ul>

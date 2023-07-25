@@ -82,9 +82,9 @@ export default function Nav({ width, height }) {
         >
           <Link
             className={`nav_link${selected == 4 ? ' nav_link_selected' : ''}`}
-            to="/historia"
+            to="/logros"
           >
-            HISTORIA
+            LOGROS
           </Link>
         </li>
         <li
@@ -93,9 +93,9 @@ export default function Nav({ width, height }) {
         >
           <Link
             className={`nav_link${selected == 6 ? ' nav_link_selected' : ''}`}
-            to="/logros"
+            to="/historia"
           >
-            LOGROS
+            HISTORIA
           </Link>
         </li>
 

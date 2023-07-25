@@ -206,7 +206,7 @@ export async function getPosts() {
             { name: 'Jager con gaseosa' },
             { name: 'Jager con speed' },
             { name: 'Chupito con Jager' },
-            { name: ' Chupito de José Cuervo Especial' },
+            { name: 'Chupito de José Cuervo Especial' },
             { name: 'Chupito de José Cuervo Gold' },
           ],
         },
