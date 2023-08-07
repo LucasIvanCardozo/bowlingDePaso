@@ -60,7 +60,7 @@ export default function Footer() {
           Creado por{' '}
           <b>
             <a
-              href="https://www.instagram.com/lucardozo27/"
+              href="https://www.linkedin.com/in/lucas-ivan-cardozo/"
               target="_blank"
               rel="noopener noreferrer"
             >

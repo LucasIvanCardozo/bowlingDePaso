@@ -98,10 +98,11 @@
   left: 100%;
   transform: translate(-100%, -70%);
   transition-delay: 0.3s;
-  z-index: 5;
+  z-index: 1;
 }
 
 .section_betters_medal[verinfo] {
+  opacity: 0;
 }
 
 .section_betters_front {

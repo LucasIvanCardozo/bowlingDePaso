@@ -1,33 +1,33 @@
-import { json } from "@remix-run/node";
-import { Link, useLoaderData } from "@remix-run/react";
-import EnBlanco from "../components/enBlanco";
-import ItemCarta from "../components/itemCarta";
-import Marcas from "../components/marcas";
-import styles from "~/styles/menu.css";
-import stylesItemCarta from "~/styles/itemCarta.css";
-import stylesMarcas from "~/styles/marcas.css";
-import pizza from "~/media/images/pizza.webp";
-import cerveza from "~/media/images/cerveza.webp";
-import helado from "~/media/images/helado.webp";
-import { getPosts } from "../db/db";
-import { useEffect, useState } from "react";
-import useIntersection from "~/useIntersection";
+import { json } from '@remix-run/node';
+import { Link, useLoaderData } from '@remix-run/react';
+import EnBlanco from '../components/enBlanco';
+import ItemCarta from '../components/itemCarta';
+import Marcas from '../components/marcas';
+import styles from '~/styles/menu.css';
+import stylesItemCarta from '~/styles/itemCarta.css';
+import stylesMarcas from '~/styles/marcas.css';
+import pizza from '~/media/images/pizza.webp';
+import cerveza from '~/media/images/cerveza.webp';
+import helado from '~/media/images/helado.webp';
+import { getPosts } from '../db/db';
+import { useEffect, useState } from 'react';
+import useIntersection from '~/useIntersection';
 
 export const meta = () => {
   return [
-    { title: "Bowling de Paso - Menu" },
+    { title: 'Bowling de Paso - Menu' },
     {
-      name: "description",
-      content: "Carta de comidas, busca tu favorita!",
+      name: 'description',
+      content: 'Carta de comidas, busca tu favorita!',
     },
   ];
 };
 
 export const links = () => {
   return [
-    { rel: "stylesheet", href: styles },
-    { rel: "stylesheet", href: stylesItemCarta },
-    { rel: "stylesheet", href: stylesMarcas },
+    { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: stylesItemCarta },
+    { rel: 'stylesheet', href: stylesMarcas },
   ];
 };
 
@@ -62,7 +62,7 @@ export default function Menu() {
           <h1
             className="titulo_h"
             ref={elementRef}
-            isvisible={isVisible ? "true" : "false"}
+            isvisible={isVisible ? 'true' : 'false'}
           >
             MENÚ
           </h1>
@@ -101,6 +101,25 @@ export default function Menu() {
       <article className="carta">
         <div className="carta_categorias">
           <ul className="carta_categoriasUl">
+            {data.map((data) => (
+              <li
+                className="carta_categoriasLi"
+                key={data.name}
+                ref={data.id == 0 ? elementRef5 : null}
+                isvisible={isVisible5 && data.id == 0 ? 'true' : 'false'}
+                onClick={() => {
+                  categoria != data.id
+                    ? (setCategoria(data.id),
+                      data.subcategoriasBool
+                        ? null
+                        : setPagina({ categoria: data.id, subcategoria: 0 }))
+                    : null;
+                }}
+                open={pagina.categoria == data.id}
+              >
+                <p className="carta_categoriasP">{data.name}</p>
+              </li>
+            ))}
             {data[categoria].subcategoriasBool ? (
               <div className="carta_subcategorias">
                 <ul className="carta_subcategoriasUl">
@@ -121,25 +140,6 @@ export default function Menu() {
                 </ul>
               </div>
             ) : null}
-            {data.map((data) => (
-              <li
-                className="carta_categoriasLi"
-                key={data.name}
-                ref={data.id == 0 ? elementRef5 : null}
-                isvisible={isVisible5 && data.id == 0 ? "true" : "false"}
-                onClick={() => {
-                  categoria != data.id
-                    ? (setCategoria(data.id),
-                      data.subcategoriasBool
-                        ? null
-                        : setPagina({ categoria: data.id, subcategoria: 0 }))
-                    : null;
-                }}
-                open={pagina.categoria == data.id}
-              >
-                <p className="carta_categoriasP">{data.name}</p>
-              </li>
-            ))}
           </ul>
         </div>
         <section className="carta_info">
